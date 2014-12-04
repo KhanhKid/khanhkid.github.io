@@ -1,4 +1,4 @@
-<?echo "khanhkid";die();?>
+<?php echo "khanhkid";die();?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
