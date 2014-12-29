@@ -39,12 +39,14 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="https://www.facebook.com/photo.php?fbid=969016709778694&set=a.969016683112030.1073741860.100000111210389&type=1&permPage=1">Đặt Hàng</a>
-	  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkhanhkid.github.io%2Fbanhtrang" target="_blank"><image src="http://khanhkid.github.io/banhtrang/fb_icon.png"></a>
+		<a class="navbar-brand" href="https://www.facebook.com/photo.php?fbid=969016709778694&set=a.969016683112030.1073741860.100000111210389&type=1&permPage=1"><img width="45px" src="http://khanhkid.github.io/banhtrang/Cart.png"/></a>
 	</div>
+	<div class="nav navbar-nav navbar-right">
+		<img id="fbshare" width="45px" src="http://khanhkid.github.io/banhtrang/fb_icon.png" onclick='openCenteredWindow("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkhanhkid.github.io%2Fbanhtrang");'/>
+	<div>
   </div>
 </nav>
-<div class="row">
+<!--<div class="row">
     <div style="margin-top:50px;margin-left: 15px;">
         <center>
             <div id="piktowrapper-embed">
@@ -54,7 +56,7 @@
             </div>
         </center>
     </div>
-</div>
+</div>-->
 </body>
 
 <script>
@@ -65,5 +67,13 @@
         js.src="https://magic.piktochart.com/assets/embedding/embed.js?UID=3995954-untitled-infographic";
         ref.parentNode.insertBefore(js, ref);
     }(document));
+	function openCenteredWindow(url) {
+        var width = 550;
+        var height = 650;
+        var left = parseInt((screen.availWidth/2) - (width/2));
+        var top = parseInt((screen.availHeight/2) - (height/2));
+        var windowFeatures = "width=" + width + ",height=" + height + ",status,resizable,left=" + left + ",top=" + top + "screenX=" + left + ",screenY=" + top;
+        myWindow = window.open(url, "subWind", windowFeatures);
+    }
 </script>
 <html>
