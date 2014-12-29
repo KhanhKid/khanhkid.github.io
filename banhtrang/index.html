@@ -27,6 +27,29 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     </head>
+<style type="text/css">
+    .bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0%;
+    height: 5px;
+    z-index: 9999;
+    }
+
+    .bar-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #5454b9;
+    }
+    .container {
+        margin-top: 5px;
+    }
+</style>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,37 +59,32 @@
     ga('send', 'pageview');
 </script>
 <body style ="background-color: #E9E9E9">
+<div class="bar" style="width: 32.8407224958949%;"><div class="bar-bg" style="min-width: 1176px;"></div></div>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-		<a class="navbar-brand" href="https://www.facebook.com/photo.php?fbid=969016709778694&set=a.969016683112030.1073741860.100000111210389&type=1&permPage=1"><img width="45px" src="http://khanhkid.github.io/banhtrang/Cart.png"/></a>
+		<a href="https://www.facebook.com/photo.php?fbid=969016709778694&set=a.969016683112030.1073741860.100000111210389&type=1&permPage=1" style="margin-right:20px" title="Đặt Hàng"><img width="40px" src="http://khanhkid.github.io/banhtrang/Cart.png"/></a>
+        <img id="fbshare" width="45px" src="http://khanhkid.github.io/banhtrang/fb_icon.png" onclick='openCenteredWindow("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkhanhkid.github.io%2Fbanhtrang");' title="Sharing"/>
 	</div>
-	<div class="nav navbar-nav navbar-right">
-		<img id="fbshare" width="45px" src="http://khanhkid.github.io/banhtrang/fb_icon.png" onclick='openCenteredWindow("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fkhanhkid.github.io%2Fbanhtrang");'/>
-	<div>
   </div>
 </nav>
-<!--<div class="row">
+
+<div class="row">
     <div style="margin-top:50px;margin-left: 15px;">
         <center>
-            <div id="piktowrapper-embed">
-                <div class="pikto-canvas-wrap">
-                    <div class="pikto-canvas"></div>
-                </div>
-            </div>
+            <img id="info" src="http://khanhkid.github.io/banhtrang/infographic.png">
         </center>
     </div>
-</div>-->
+</div>
 </body>
 
 <script>
-    (function(d){
-        var js, id="pikto-embed-js", ref=d.getElementsByTagName("script")[0];
-        if (d.getElementById(id)) {return;}
-        js=d.createElement("script"); js.id=id; js.async=true;
-        js.src="https://magic.piktochart.com/assets/embedding/embed.js?UID=3995954-untitled-infographic";
-        ref.parentNode.insertBefore(js, ref);
-    }(document));
+
+    jQuery(document).ready(function($) {
+        $("#info").attr('style', 'width:'+$(window).width());
+        alert($(document).height());
+        $(".bar-bg").attr('style', 'min-width:'+$(window).width());
+    });
 	function openCenteredWindow(url) {
         var width = 550;
         var height = 650;
