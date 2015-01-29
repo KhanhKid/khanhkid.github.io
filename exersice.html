@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>exersice</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h2>BÀI TẬP MÔN CÔNG NGHỆ PHẦN MỀM TIÊN TIẾN</h2>
+<h4>PHÂN TÍCH PHÁT TRIỂN HỆ THỐNG THƯƠNG MẠI ĐIỆN TỬ HAILUA.COM.VN</h4>
+<p>Giảng viên: TS. Nguyễn Văn Vũ</p>
+<p>Học viên: Võ Đoàn Như Khánh – CH1402031</p>
+<h2>CÂU 1: PHÂN TÍCH 3 MÔ HÌNH DỰ ÁN</h2>
+<ul>
+<li>Rational Unified Process</li>
+<li>Waterfall Model</li>
+<li>Scrum</li>
+</ul>
+<h4>1.1 	So sánh giữa Trandition method và Agile method:</h4>
+<p>Với 3 mô hình trên thuộc 2 nhóm Trandition method (RUP, Waterfall) và Agile method (Scrum). Theo phân tích đề bài thì dự án thương mại điện tử hailua.com.vn có những đặc điểm chính sau:</p>
+<ul>
+<li>Phải cung cấp tài liệu như đặc tả yêu cầu, phân tích, thiết kế. Khách hàng cũng yêu cầu cần có tài liệu về hướng dẫn sử dụng, huấn luyện, và bảo trì sản phẩm.</li>
+<li>Một số thành phần có độ chính xác cao và an toàn.</li>
+<li>Số lượng thành viên khoảng 20 thành viên.</li>
+<li>Thời gian thực hiện 1 năm.</li>
+<li>Yêu cầu ổn định. Tuy nhiên, tùy thuộc vào thị trường và công nghệ, có thể có những thay đổi có những thay đổi về chức năng  và công nghệ.
+Từ những đặc điểm trên, Trandition method sẽ phù hợp với dự án này hơn Agile method vì Agile method có những đặc tính không phù hợp sau:</li>
+<li>Chú trọng cao vào việc hiện thực sản phẩm hơn là các tài liệu đặc tả, phân tích thiết kế,v.v… việc này sẽ ảnh hưởng đến yêu cầu của khách hàng về tài liệu sau khi kết thúc sản phẩm.</li>
+<li>Số lượng thành viên khá lớn (khoảng 20 thành viên) nên việc phân chia, quản lý công việc của Project Manager dựa trên các buổi meeting hằng ngày (bắt buộc trong Agile method) sẽ rất khó khăn để nắm bắt tiến độ công việc.</li>
+<li>Agile method không có những tài liệu, quy định, đặc tả rõ ràng vì thế có thể một số thành phần yêu cầu độ chính xác và an toàn cao có thể xảy ra lỗi gây thiệt hại cho khách hàng.</li>
+<li>Thời gian phát triển sản phẩm là 1 năm và trong tương lại sẽ có những phát triển khác về hệ thống. Với Agile method thì sau khi phát triển dự án xong method này ít có các tài liệu chi tiết về hệ thống, nên việc có một nhóm nào khác tiếp nhận việc phát triển hệ thống sẽ gặp những khó khăn nhất định.</li>
+</ul>
+<p>Từ những bất cập của phương thức Agile method đối với đặc tính của dự án thì việc chọn <strong>Trandition method là một phương án tốt nhấ</strong>t cho việc phát triển hệ thống hiện tại.</p>
+<h4>1.2 	 So sánh giữa RUP (Rational Unified Process) vs Waterfall:</h4>
+<p>Giữa 2 phương pháp này thì <strong>RUP sẽ phù hợp Waterfall Model</strong> vì Waterfall Model có những đặc tính bất lợi sau :</p>
+<ul>
+<li>Về chi phí và quy trình: Waterfall được mô tả như một thác nước. Giai đoạn trước hoàn thành thì giai đoạn sau mới được thực hiện. Tại mỗi một giai đoạn thì có một đội ngũ chuyên gia phân tích các tính huống rất cẩn trọng. Nếu phát triển theo mô hình này thì khi khách hàng có nhu cầu thay đổi thì rất khó trở lại các bước cũ vì tốn khá nhiều chi phí và thời gian.</li>
+<li>Waterfall quá dài và không có sự linh hoạt. Trong khi 1 nhóm đang phân tích 1 bước thì các nhóm khác hoàn toàn không thể tận dụng thời gian đó để đầy nhanh tiến độ cho dự án. Waterfall chỉ phù hợp cho những dự án có tính ổn định cao và khả năng chịu lỗi cực tốt tại các dự án y tế, quân sự ,v.v….</li>
+</ul>
+<p>Sau quá trình phân tích và so sánh thì mô hình RUP là mô hình phù hợp nhất cho việc phát triển dự án thương mại điện tử hailua.com.vn vì:</p>
+<ul>
+<li>Mô hình đáp ứng được các yêu cầu về tài liệu, đặc tả yêu cầu, phân tích, thiết kế, có các tài liệu về hướng dẫn sử dụng, huấn luyện, và bảo trì sản phẩm sau khi hoàn thành sản phẩm.</li>
+<li>Có những tài liệu phân tích rõ ràng nên khả năng chịu lỗi của hệ thống tốt. Đáp ứng được các yêu cầu về độ chính xác và an toàn của một số thành phần quan trọng. Trong mô hình sẽ có các kế hoạch phát triển, liên kết hệ thống, kiểm tra lỗi và có kịch bản thử nghiệm cho sản phẩm.</li>
+<li>Có thể quản lý dự án với số lượng thành viên trên 20 người và hơn nữa nếu dự án được cấp thêm thành viên tham gia.</li>
+<li>Có khả năng linh hoạt giữa các quá trình phát triển của dự án. Nếu có thay đổi thì chi phí thay đổi cũng tương đối phù hợp có thể chấp nhận được. Các công việc của các nhóm có thể cùng làm song song với nhau.</li>
+<li>Về sau này hướng phát triển nếu có một nhóm nào khác chịu trách  nhiệm nâng cấp thì cũng sẽ có những tài liệu để phát triển tiếp hệ thống sau này.</li>
+</ul>
+<h2>CÂU 2: KẾ HOẠCH DỰ KIẾN CHO DỰ ÁN</h2>
+<p>2.1 	Các giai đoạn chính và mục tiêu từng giai đoạn</p>
+<p>Dự án được phát triển theo mô hình Rational Unified Process về thời gian sẽ chia ra 4 giai đoạn chính:</p>
+<ul>
+<li>Inception phase </li>
+<li>Elaboration phase </li>
+<li>Constuction phase</li>
+<li>Transition phase</li>
+</ul>
+<p>Cuối mỗi giai đoạn chúng ta sẽ có Milestone để thống kê lại những thành quả đã đạt được tại cuối giai đoạn và đưa ra những việc phải làm gì tại những giai đoạn tiếp theo.
+Mục tiêu chính của từng giai đoạn </p>
+<p>Hình 1: Kế hoạch dự kiến dự án</p>
+<p><strong>Inception phase:</strong></p>
+<p><em>Thời gian: 3 tháng.</em></p>
+<p>Trong giai đoạn này, những thành viên trong dự án sẽ thảo luận với khách hàng để đưa ra các chức năng chính, mục tiêu phát triển của website. Từ quá trình phân tích sẽ đưa ra được những đặc tả sau:</p>
+<ul>
+<li>Các chức năng  chính sơ bộ website.</li>
+<li>Hình thành mô hình use-case cho các chức năng chính của website.</li>
+<li>Phân tích các rủi ro của website.</li>
+<li>Được ra các kế hoạch sơ bộ hướng phát triển và từng giai đoạn trong dự án.</li>
+<li>Phân tích các website thương mại đã có trên thị trường và đưa ra gợi ý hướng phát triển cho khách hàng.</li>
+</ul>
+<p><strong>Elaboration phase</strong></p>
+<p><em>Thời gian: 2 tháng.</em></p>
+<ul>
+<li>Trong giai đoạn này sẽ phân tích sâu hơn vào dự án nhằm đưa ra toàn bộ mô hình use-case của website.</li>
+<li>Đưa ra các nền tảng phần mềm được sử dụng trong dự án.</li>
+<li>Loại bỏ các nguy cơ, rủi ro cao có thể ảnh hướng đến hệ thống.</li>
+<li>Xem lại và đưa ra các rủi ro mới của dự án nhằm giảm thiểu khả năng lỗi của toàn hệ thống.</li>
+<li>Xác định các chức năng cần thiết hoặc không cần thiết của hệ thống.</li>
+</ul>
+<p><strong>Contrustion phase</strong>
+<em>Thời gian: 3 tháng.</em></p>
+<p>Trong giai đoạn này, tất cả các thành phần và tính năng của hệ thống sẽ được phát triển vào sản phẩm. Thực hiện phát triển và tối ưu hóa về hiệu suất làm việc hệ thống. Trong nữa cuối giai đoạn sẽ có quá trình kiểm thử sản phẩm nhằm phát hiện các lỗi và sữa chữa</p>
+<ul>
+<li>Sản phẩm sẽ được hình thành và sẽ chạy được trên nhiều Platforms khác nhau.</li>
+<li>Các tài liệu hướng dẫn cũng sẽ được tạo ra.</li>
+<li>Các mô tả chức năng trong phiên bản hiện tại.</li>
+</ul>
+<p>Sau giai đoạn này, Project manager phải đánh giá và quyết định xem website đã sẵn sàng đi vào hoạt động chưa,đánh giá hiệu suất, các rủi ro có thể có và phát hành bản beta của website.</p>
+<p><strong>Transition phase</strong></p>
+<p><em>Thời gian: 2 tháng.</em></p>
+<p>Giai đoạn này nhằm chỉnh sữa vào hoàn thiện sản phẩm để chuyển giao cho khách hàng. Sản phẩm hoàn chỉnh là sản phẩm đã được kiểm tra và sửa hết các lỗi trong quá trình kiểm thử.</p>
+<p>Giai đoạn này cũng là giai đoạn tạo ra các tài liệu về đặc tả yêu cầu, phân tích, thiết kế, các tài liệu về hướng dẫn sử dụng, huấn luyện, và bảo trì hệ thống.  Những chức năng và hướng dẫn của hệ thống website. Sau giai đoạn này toàn bộ các tài liệu trên sẽ được gửi cho khách hàng để làm tư liệu và train cho nhân viên.
+Những yêu cầu trong giai đoạn này:</p>
+<ul>
+<li>Giao sản phẩm website thử nghiệm cho khách hàng để kiểm thử.</li>
+<li>Đào tạo người sử dụng (adminstrator) và người bảo trì hệ thống.</li>
+<li>Hỗ trợ chuyển giao sản phẩm sau khi khách hàng đã kiểm thử.</li>
+</ul>
+<p>Cuối giai đoạn, sản phẩm chính thức sẽ được giao cho khách hàng cùng toàn bộ các tài liệu mà khách hàng yêu cầu về hệ thống và hướng dẫn các nhân viên về chức năng, bảo trì hệ thống.</p>
+<p>Thời gian dự phòng của dự án: 2 tháng (dùng để xử lý các lỗi phát sinh trong hệ thống).</p>
+<p>Các core process của RUP được sử dụng trong dự án này bao gồm:</p>
+<ul>
+<li>Requirements workflow</li>
+<li>Analysis &amp; Design workflow</li>
+<li>Implementation workflow</li>
+<li>Test workflow</li>
+<li>Deployment workflow</li>
+<li>Project Mangement workflow  </li>
+</ul>
+<h4>2.2 	Phân chia công việc từng nhóm</h4>
+<p>**Project Manager	 1	** </p>
+<ul>
+<li>Lập kế hoạch, quản lý, kiểm tra, giám sát toàn bộ quá trình làm dự án.</li>
+<li>Quản lý các rủi ro có thể xảy ra.</li>
+<li>Thảo luận các yêu cầu của khách hàng và phân tích, trao đổi với các team trong dự án.</li>
+</ul>
+<p><strong>System Analyst	4</strong>	</p>
+<ul>
+<li>Từ những nhu cầu của khách hàng phân tích đưa ra các Actors và thiết kế Use case Model cho toàn hệ thống.</li>
+<li>Đưa ra các mô hình hóa để mô tả hoạt động của hệ thống.</li>
+</ul>
+<p><strong>Designer	3</strong>	</p>
+<ul>
+<li>Từ các Use case thiết kế các chức năng, giao diện tương tác vời người dùng, các chức năng quản trị hệ thống con cho adminstrator v.v… để phục vụ cho các giai đoạn developer lập trình.</li>
+</ul>
+<p><strong>Developer	6</strong>	</p>
+<ul>
+<li>Dựa vào các gói giao diện mà Designer thiết kế để định nghĩa tổ chức code và hiện thực hóa toàn bộ các thiết kế. </li>
+</ul>
+<p><strong>Tester	4</strong>	</p>
+<ul>
+<li>Kiểm thử hoạt động của các chức năng của hệ thống.</li>
+<li>Kiểm tra đủ các chức năng mà khách hàng đã yêu cầu.</li>
+<li>Trong từng giai đoạn sẽ thực hiện việc kiểm thử với những chức năng trong từng giai đoạn.</li>
+</ul>
+<h4>2.3 	Các Key Practices trong dự án</h4>
+<p><strong>SPTO - Software Project Tracking and Oversight</strong>	</p>
+<ul>
+<li>So sánh các kết quả thực tế với kế hoạch đã đưa ra từ trước.</li>
+<li>Thực hiện các biện pháp khắc phục lỗi khi kết quả thực tế hoặc hiệu suất sản phẩm sai kế hoạch.</li>
+<li>Các thay đổi phải thông qua sự đồng ý của các nhóm và những cá nhân liên quan.</li>
+</ul>
+<p><strong>SQA - Software Quality Assurance</strong></p>
+<ul>
+<li>Đảm bảo chất lượng phần mềm đúng kế hoạch đề ra.</li>
+<li>Tuân thù các nguyên tắc của dự án, phát triển trên các tiêu chuẩn, thủ tục và các yêu cầu đã được hoạch định từ đầu.</li>
+<li>Các hoạt động nhằm đảm bảo SQA sẽ được thông báo với các nhóm và các cá nhân liên quan.</li>
+<li>Những vấn đề không thể giải quyết trong phạm vi dự án sẽ được giải quyết bởi người quản lý cao hơn.</li>
+</ul>
+<p><strong>RM  -  Requirements Management</strong>	</p>
+<ul>
+<li>Các yêu cầu phần mềm được kiểm soát để đưa ra một số tiêu chuẩn nhất định cho việc phát triển phần mềm và quản lý dự án.
+Kế hoạch, sản phầm và các hoạt động trong dự án phải nhất quán và bám sát theo yêu cầu dự án.</li>
+</ul>
+<p>**SPP - Software Project Planning	**
+- Ước lượng các tài liệu cần thiết cho dự án và việc theo dõi dự án.
+- Các hoạt động của dự án sẽ được lên kết hoạch và có tài liệu rõ ràng.
+- Nhóm và cá nhân liên quan phải đồng ý và cam kết có trách nhiệm với dự án.</p>
+<p><strong>IC - Intergroupb Coordination</strong>	</p>
+<ul>
+<li>Tất cả các nhóm phải đồng ý và thồng nhất thực hiện các yêu cầu của khách hàng.</li>
+<li>Các nhóm phải có những cam kết với nhau trong quá trình phát triển dự án</li>
+<li>Các nhóm phải giám sát, xác định và giải quyết các vấn đề của nhóm khác</li>
+</ul>
+<p><strong>PR - Peer Reviews</strong></p>
+<ul>
+<li>Xem xét lại các hoạt động có trong kế hoạch</li>
+<li>Xác định và loại bỏ các khuyết điểm trong quá trình phát triển dự án</li>
+</ul>
+<h4>2.4 	Những rủi ro của dự án có thể xảy ra</h4>
+<p><strong>Trễ thời gian dự kiến của kế hoạch.</strong>	</p>
+<p>*Trung bình	*</p>
+<p>Project Manager luôn giám sát, kiểm tra tiến độ đều đặn. Giải quyết những khó khăn một cách nhanh chóng.</p>
+<p><strong>Vấn đề thay đổi công nghệ, chức năng của hệ thống.</strong></p>
+<p><em>Trung bình</em></p>
+<p>Từ giai đoạn đầu phải có những thành viên có kinh nghiệm định hướng phát triển cho khách hàng biết những tính năng có thể phát triển trong tương lai.
+Quản lý dự án phải có tầm nhìn xa để hướng website không trở lên lạc hậu về công nghệ tại thời điểm giao website cho khách hàng.</p>
+<p><strong>Những vấn đề liên quan đến kỹ thuật: Ảnh hưởng đến hiệu suất, khả năng đáp ứng/ chịu tải của hệ thống.</strong></p>
+<p><em>Khá nghiêm trọng</em>	</p>
+<p>Cần các thành viên có kinh nghiệm trong việc phát triển hệ thốgn website, cũng như các thành viên có kinh nghiệm tối ưu hoá code sao cho hệ thống luôn đáp ứng một lượng user đồng thời cao nhất.</p>
+<p><strong>Vấn đề về phần thanh toán của hệ thống, có thể ảnh hướng đến tiền bạc của khách hàng.</strong>	</p>
+<p><em>Khá nghiêm trọng</em></p>
+<p>Trước khi giao sản phẩm cho khách hàng phải kiểm tra thật kỹ toàn bộ hệ thống nhất là phần thanh toán trực tuyến của website.
+Nếu có điều kiện thực hiện giao dịch thật để kiểm tra hệ thống.</p>
+<p>Website thảo luận trực tuyến</p>
+<h4>Reference:</h4>
+<ol>
+<li>Pankaj Jalote (Editor) , 2002, Software Project Management in Practice book, 269 pp.</li>
+<li>IBM Company, 1998, Rational Unified Process - Best Practices for SoftwareDevelopment Teams. http://www.ibm.com/developerworks/rational/library/content/03July/1000/1251/1251<em>bestpractices</em>TP026B.pdf , truy cập ngày 30/01/2015.</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
