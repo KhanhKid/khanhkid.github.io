@@ -235,6 +235,7 @@ header nav .login_btn:hover{
 
 .hero .caption h3{
     color: #fff;
+	padding-top:10px;
     font-family: "lato-regular", Helvetica, Arial, sans-serif;
     font-size: 14px;
     margin: -15px 0 0 25px;
@@ -466,13 +467,13 @@ header nav .login_btn:hover{
 
 .listings .divtitle{
 	height: 30px;
-	background-color:#BFD9F2;
+	background-color:#F1592A;
 }
 
 .listings .title{
 	padding-top: 10px;
   	padding-left: 10px;
-    	font-family: "lato-bold", Helvetica, Arial, sans-serif;
+    font-family: "lato-bold", Helvetica, Arial, sans-serif;
 	color: white;
 }
 
@@ -732,7 +733,7 @@ footer .copyrights a.ph_link{
 
 @media (max-width:1500px){
     .hero{
-        height: 400px;
+        height: 800px;
     }
 }
 
