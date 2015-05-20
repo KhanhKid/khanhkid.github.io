@@ -82,16 +82,16 @@
       <h2 id="name">KhanhKid</h2>
       <h3 id="title">Programmer</h3>
       <span id="location"><i class="fa fa-map-marker"></i>undefined</span>
-      <a id="follow" href="https://www.facebook.com/nbt.nguoixau">关注我</a>
+      <a id="follow" href="https://www.facebook.com/nbt.nguoixau">FOLLOW</a>
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        2
-        <span>文章</span>
+        1
+        <span>post</span>
       </div>
       <div class="article-info-block">
         0
-        <span>标签</span>
+        <span>tag</span>
       </div>
     </div>
     
@@ -99,7 +99,7 @@
       <table class="contact-list">
         <tr>
         
-          <td><a href="http://github.com/ppoffice" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          <td><a href="https://github.com/KhanhKid" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
         
           <td><a href="/blog/#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
         
@@ -117,7 +117,7 @@
 </aside>
       <section id="main">
   
-    <article id="photo-My-Gallery" class="article article-type-photo" itemscope itemprop="blogPost">
+    <article id="post-Create-Blog-Github-vs-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -125,15 +125,15 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/05/20/My-Gallery/">My Gallery</a>
+      <a class="article-title" href="/blog/2015/05/21/Create-Blog-Github-vs-Hexo/">Create Blog Association Between GitHub Page and Hexo - Blog Framework</a>
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/blog/2015/05/20/My-Gallery/">
-    <time datetime="2015-05-20T01:31:48.000Z" itemprop="datePublished">2015-05-20</time>
+  <a href="/blog/2015/05/21/Create-Blog-Github-vs-Hexo/">
+    <time datetime="2015-05-20T21:49:53.000Z" itemprop="datePublished">2015-05-21</time>
   </a>
 </div>
           
@@ -142,60 +142,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>sdaf<br>asdf</p>
+        <h2 id="title:_Create_Blog:_Association_Between_GitHub_Page_and_Hexo_-_Blog_Framework">title: Create Blog: Association Between GitHub Page and Hexo - Blog Framework  </h2><p>Đây là bài blog đầu tiên của mình về cách tạo ra một blog đơn giản static page cho dân IT (giống như cái này <a href="http://khanhkid.github.io/blog/" target="_blank" rel="external">http://khanhkid.github.io/blog/</a>), Các bạn có thể tự tạo cho mình 1 blog căn bản, quản lý bài viết, đăng bài bằng Mark Down 2, cũng như gia nhập vào thế giới bloger. :)</p>
+<p><strong>Chú ý:</strong> Vì cái này là dạng dùng static page (không dùng PHP và Database) nên không có vụ có editor gì đó bấm phát đăng bài đâu nhé. Toàn bộ là code cả :D.</p>
+<h2 id="Tool_Requirement">Tool Requirement</h2><ul>
+<li>Account GitHub: Vào đây tạo 1 Account GitHub <a href="https://github.com/" target="_blank" rel="external">https://github.com/</a></li>
+<li><a href="http://git-scm.com/" title="Git Bash" target="_blank" rel="external">Git Bash</a> : Cái này là công cụ để up code lên trang GitHub</li>
+<li><a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a>: Cái này dùng để cài đặt Hexo</li>
+<li><a href="http://markdownpad.com/" target="_blank" rel="external">MarkDown 2</a>: Cái này là dùng để viết bài. Cái này hiện nay dùng khá nhiều với đuôi là <em>.md -&gt; xưa mấy cái Readme thường là </em>.txt giờ người ta dùng cái này để viết Readme. Viết xong nó có thể cover qua HTML cho mình luôn.</li>
+</ul>
+<h2 id="Page_Reference:">Page Reference:</h2><ul>
+<li><a href="https://pages.github.com/" target="_blank" rel="external">GitHub Page</a>: Cách tạo page trên 1 cái Repository trên GitHub</li>
+<li><a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>: Dùng để tạo 1 thư viện để Generate từ cái file Mark Down (*.md) thành 1 trang blog như vầy <a href="http://khanhkid.github.io/blog/" target="_blank" rel="external">http://khanhkid.github.io/blog/</a></li>
+</ul>
+<hr>
+<h3 id="Overview_Step_by_Step:">Overview Step by Step:</h3><p>Mình overview căn bản cho các bạn tìm hiểu cho dễ. Đối với những bạn không làm được thì ráng đợi mình sẽ viết các bài tiếp theo để hướng dẫn từng bước step by step cho dễ hình dung. :)</p>
+<p>Cơ bản nó sẽ gồm những Step chính như vầy:</p>
+<p><strong>Step 1:</strong> Tạo cái Account của GitHub.</p>
+<p><strong>Step 2:</strong> Develop code cái “Hello World” lên GitHub. Cho quen môi trường GitHub</p>
+<p><strong>Step 3:</strong> Tạo cái Page cho cái GitHub của mình. Làm theo cái này nè <a href="https://pages.github.com/" target="_blank" rel="external">GitHub Page</a>.</p>
+<p><strong>Step 4:</strong> Cài cái <a href="https://nodejs.org/" target="_blank" rel="external">Node.js</a> và cài <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a></p>
+<p><strong>Step 5:</strong> Cách generate ra 1 trang blog từ file Mark Down.</p>
+<hr>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://khanhkid.github.io/blog/2015/05/20/My-Gallery/" data-id="ci9w2uzst0000d8s1puwwh5jo" class="article-share-link">分享到</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/05/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/blog/2015/05/20/hello-world/">
-    <time datetime="2015-05-20T01:26:50.239Z" itemprop="datePublished">2015-05-20</time>
-  </a>
-</div>
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://khanhkid.github.io/blog/2015/05/20/hello-world/" data-id="ci9w2uztm0001d8s1b7rgvns9" class="article-share-link">分享到</a>
+      <a data-url="http://khanhkid.github.io/blog/2015/05/21/Create-Blog-Github-vs-Hexo/" data-id="ci9xacdfn000088s1m7xsq0zd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,14 +184,14 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
+    <h3 class="widget-title">recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
         
           <li>
             
             <div class="item-thumbnail">
-              <a href="/blog/2015/05/20/My-Gallery/" class="thumbnail">
+              <a href="/blog/2015/05/21/Create-Blog-Github-vs-Hexo/" class="thumbnail">
   
     <span class="thumbnail-image thumbnail-none"></span>
   
@@ -228,25 +200,8 @@
             
             <div class="item-inner">
               <p class="item-category"></p>
-              <p class="item-title"><a href="/blog/2015/05/20/My-Gallery/" class="title">My Gallery</a></p>
-              <p class="item-date"><time datetime="2015-05-20T01:31:48.000Z" itemprop="datePublished">2015-05-20</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/blog/2015/05/20/hello-world/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/blog/2015/05/20/hello-world/" class="title">Hello World</a></p>
-              <p class="item-date"><time datetime="2015-05-20T01:26:50.239Z" itemprop="datePublished">2015-05-20</time></p>
+              <p class="item-title"><a href="/blog/2015/05/21/Create-Blog-Github-vs-Hexo/" class="title">Create Blog Association Between GitHub Page and Hexo - Blog Framework</a></p>
+              <p class="item-date"><time datetime="2015-05-20T21:49:53.000Z" itemprop="datePublished">2015-05-21</time></p>
             </div>
           </li>
         
@@ -263,9 +218,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
+    <h3 class="widget-title">archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
