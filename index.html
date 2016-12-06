@@ -10,16 +10,24 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <link rel='shortcut icon' type='image/x-icon' href='icon.ico' />
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
   <script src="js/vendor/jquery.hashchange.min.js"></script>
   <script src="js/vendor/jquery.easytabs.min.js"></script>
 
   <script src="js/main.js"></script>
+    <script language="javascript" type="text/javascript"> 
+        $(function () { 
+            if (location.href.indexOf("https://") == -1) { 
+                location.href = location.href.replace("http://", "https://"); 
+            } 
+        }); 
+    </script> 
   <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
@@ -67,7 +75,7 @@
                     <section class="clearfix">
                         <div class="g2">
                             <div class="photo">
-                                <img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/10553844_925180160829016_1448177450166313518_o.jpg" alt="Khanh Kid">
+                                <img src="images/avatar.png" alt="Khanh Kid">
                             </div>
                             <div class="info">
                                 <h2>
@@ -115,7 +123,7 @@
                             <div class="item-box clearfix">
                               <i class="icon-facebook"></i>
                               <div class="item-data">
-                                <h3><a href="http://fb.me/nbt.nguoixau">Nobita Chàng</a></h3>
+                                <h3><a href="http://fb.me/nbt.nguoixau">KhanhKid in Facebook</a></h3>
                                 <p>Facebook Profile</p>
                               </div>
                             </div>
@@ -124,13 +132,25 @@
                             <div class="item-box clearfix">
                               <i class="icon-linkedin"></i>
                               <div class="item-data">
-                                <h3><a href="https://vn.linkedin.com/in/khanhkid">KhanhKid</a></h3>
-                                <p>KhanhKid</p>
+                                <h3><a href="https://vn.linkedin.com/in/khanhkid">KhanhKid in LinkedIn</a></h3>
+                                <p>LinkedIn Profile</p>
                               </div>
                             </div>
                           </div>
                         </div>
-                    </section><!-- content -->
+						<div class="break"></div>
+						<div class="contact-info">
+						<div class="g1">
+                            <div class="item-box clearfix">
+                              <i class="icon-coffee"></i>
+                              <div class="item-data">
+                                <h3><a href="https://khanhkid.github.io/blog/">KhanhKid's Blog</a></h3>
+                                <p>My Blog</p>
+                              </div>
+                            </div>
+                          </div>
+						 </div>
+					</section><!-- content -->
                 </div>
               <!-- End About Tab Data -->
               <!-- Resume Tab Data -->
@@ -142,10 +162,46 @@
                             </h3>
                             <ul class="no-list work">
 								<li>
-                                    <li>
-										<p>Coming soon</p>
-									</li>
-								</li>
+                                    <h5>
+                                        PHP Programmer
+                                    </h5><span class="label label-info">03/2014 - Now</span>
+                                    <p>
+                                        I'm PHP Programmer at <a href="http://vinaresearch.net/public/">Vinaresearch </a> - W&S Group .<br>
+										I'm maintaining and develop all service of our Company.<br>
+											+ <a href="http://vinaresearch.net/public/">Vinaresearch </a><br>
+											+ <a href="http://nusaresearch.net/public/">Nusaresearch </a><br>
+											+ <a href="http://yimresearch.net/public/">Yimresearch </a><br>
+                                    </p>
+                                </li>
+								<li>
+                                    <h5>
+                                        FreeLancer
+                                    </h5><span class="label label-info">Waiting</span>
+                                    <p>
+                                    
+										ALl Free Lance Project<br>
+											+ CodeIgnitor: <a href="http://www.sunrisetsttravel.com/"> Sunrise TST Travel </a> <span class="label label-success">05/2015</span><br>
+											
+                                    </p>
+                                </li>
+								<li>
+                                    <h5>
+                                        My Blog
+                                    </h5>
+                                    <p>
+										<a href="https://hexo.io/">Hexo.io</a>: <br>+ <a href="http://khanhkid.github.io/blog/"> Khanhkid's blog: </a> Writing my blog for me. Showing my opinion about anything in my life  <span class="label label-success">Working</span><br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Internships PHP Programmer
+                                    </h5>
+                                    <p>
+											+ Assistant Teacher at Microsoft Office Center.<span class="label label-success">09/2010 - 11/2010</span> <br>
+											+ Internships PHP Programmer at Vinareserach.<span class="label label-success">09/2014 - 11/2014</span> <br>
+
+                                    </p>
+                                </li>
                                 <!--<li>
                                     <h5>
                                         Freelance Web Designer
@@ -185,8 +241,14 @@
                             </h3>
                             <ul class="no-list work">
 								<li>
-									<p>Coming soon</p>
-								</li>
+                                    <h5>
+                                        University of Information Technology
+                                    </h5><span class="label label-success">2009-2014</span>
+                                    <p>
+											Major: Network and Communication
+											GPA: 7.6 
+									</p>
+                                </li>
                                 <!--<li>
                                     <h5>
                                         NoUse School
@@ -222,11 +284,17 @@
                                 <div class="meter sunflower">
                                     <span style="width: 40%"><span>Firework</span></span>
                                 </div>
+                                <div class="meter pomengrate">
+                                    <span style="width: 70%"><span>Microsoft Office</span></span>
+                                </div>
 								<div class="meter sunflower">
                                     <span style="width: 50%"><span>Zend Framework</span></span>
                                 </div>
-                                <div class="meter pomengrate">
-                                    <span style="width: 70%"><span>Microsoft Office</span></span>
+								<div class="meter asbestos">
+                                    <span style="width: 70%"><span>Phalcon</span></span>
+                                </div>
+								<div class="meter emerald">
+                                    <span style="width: 50%"><span>CodeIgniter</span></span>
                                 </div>
 
                                 <div class="break"></div>
