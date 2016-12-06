@@ -48,7 +48,7 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Tết Hoà Vui 2017</h1>
-            <h3><strong>Mục 1: Gây quỹ 200l mật ong</strong></h3>
+            <h3><strong>Mục 1: Gây quỹ <span id="total">0</span>/200l mật ong</strong></h3>
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1 text-center">
 					<div id="sample_goal"></div>
@@ -103,9 +103,11 @@
 				type: 'GET',
 			})
 			.done(function(data) {
+				total = data.valueRanges[0].values[0][0];
+				$("#total").val(total);
 				$('#sample_goal').goalProgress({
 					goalAmount: 200,
-					currentAmount: data.valueRanges[0].values[0][0],
+					currentAmount: total,
 					textBefore: 'Xong ',
 					textAfter: ' Lít :)'
 				});
