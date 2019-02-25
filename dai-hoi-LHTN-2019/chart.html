@@ -26,68 +26,6 @@
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        
-        .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-        }
-
-        .switch input { 
-        opacity: 0;
-        width: 0;
-        height: 0;
-        }
-
-        .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: .4s;
-        transition: .4s;
-        }
-
-        .slider:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-        }
-
-        input:checked + .slider {
-        background-color: #2196F3;
-        }
-
-        input:focus + .slider {
-        box-shadow: 0 0 1px #2196F3;
-        }
-
-        input:checked + .slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-        }
-
-        /* Rounded sliders */
-        .slider.round {
-        border-radius: 34px;
-        }
-
-        .slider.round:before {
-        border-radius: 50%;
-        }
-    </style>
 </head>
 
 <body id="top">
@@ -170,79 +108,9 @@
         <div class="home-content">
             <div class="row home-content__main">
                 <h1> Khảo sát ý kiến</h1>
+                <h3> Số lượng đã hoàn thành: <span id="num_finished"> </span>/70</h4>
                 <div class="col-six tab-full">
-                    <aside class="pull-quote">
-                        <blockquote>
-                            <p>Câu hỏi 1</p>
-                        </blockquote>
-                    </aside>
-                </div>
-                <div class="col-six tab-full" style="padding: 2.1rem 3rem 2.1rem 0px;">
-                    <p>
-                        <span style="color: white">Không đồng ý</span>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                        <span style="color: white">Đồng ý</span>
-                    </p>
-                </div>
-            </div>
-            <div class="row home-content__main">
-                <div class="col-six tab-full">
-                    <aside class="pull-quote">
-                        <blockquote>
-                            <p>Câu hỏi 1</p>
-                        </blockquote>
-                    </aside>
-                </div>
-                <div class="col-six tab-full" style="padding: 2.1rem 3rem 2.1rem 0px;">
-                    <p>
-                        <span style="color: white">Không đồng ý</span>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                        <span style="color: white">Đồng ý</span>
-                    </p>
-                </div>
-            </div>
-            <div class="row home-content__main">
-                <div class="col-six tab-full">
-                    <aside class="pull-quote">
-                        <blockquote>
-                            <p>Câu hỏi 1</p>
-                        </blockquote>
-                    </aside>
-                </div>
-                <div class="col-six tab-full" style="padding: 2.1rem 3rem 2.1rem 0px;">
-                    <p>
-                        <span style="color: white">Không đồng ý</span>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                        <span style="color: white">Đồng ý</span>
-                    </p>
-                </div>
-            </div>
-            <div class="row home-content__main">
-                <div class="col-six tab-full">
-                    <aside class="pull-quote">
-                        <blockquote>
-                            <p>Câu hỏi 1</p>
-                        </blockquote>
-                    </aside>
-                </div>
-                <div class="col-six tab-full" style="padding: 2.1rem 3rem 2.1rem 0px;">
-                    <p>
-                        <span style="color: white">Không đồng ý</span>
-                        <label class="switch">
-                            <input type="checkbox" checked>
-                            <span class="slider round"></span>
-                        </label>
-                        <span style="color: white">Đồng ý</span>
-                    </p>
+                    <div id="barchart_material"  style="width: 1200px; height: 500px;"></div>
                 </div>
             </div>
         </div> <!-- end home-content -->
@@ -328,14 +196,63 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
-        $.ajax({
-            type: "GET",
-            url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!B2:G2?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
-            dataType: "json",
-            success: function (response) {
-                console.log(response);
-            }
-        });
+        // $.ajax({
+        //     type: "GET",
+        //     url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!B1:C15?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
+        //     dataType: "json",
+        //     success: function (response) {
+        //         console.log(response.values[0]);
+        //     }
+        // });
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var items
+            $.ajax({
+                type: "GET",
+                url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!B1:C15?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
+                dataType: "json",
+                success: function (response) {
+                    $("#num_finished").html(response.values[0][0]);
+                    items = [
+                        ['Ques', 'Đồng ý', 'Không Đồng ý'],
+                        ["Cau 1", response.values[1][0], response.values[1][1]],
+                        ["Cau 2", response.values[2][0], response.values[2][1]],
+                        ["Cau 3", response.values[3][0], response.values[3][1]],
+                        ["Cau 4", response.values[4][0], response.values[4][1]],
+                        ["Cau 5", response.values[5][0], response.values[5][1]],
+                        ["Cau 6", response.values[6][0], response.values[6][1]],
+                        ["Cau 7", response.values[7][0], response.values[7][1]],
+                        ["Cau 8", response.values[8][0], response.values[8][1]],
+                        ["Cau 9", response.values[9][0], response.values[9][1]],
+                    ];
+                    var data = google.visualization.arrayToDataTable(items);
+
+                    var options = {
+                        vAxis: {
+                            textStyle: { color: 'white', fontName: 'Arial Black', fontSize: 18 }
+                        },
+                        hAxis: {
+                            textStyle: { color: 'white', fontName: 'Arial Black', fontSize: 18 }
+                        },
+                        is3D: true,
+                        backgroundColor: { fill: 'transparent' },
+                        chart: {
+                            title: 'Biểu quyết',
+                            subtitle: 'Đại hội Đại biểu Hội LHTN Việt Nam Phường 7 Lần thứ V Nhiệm kỳ 2019 – 2024',
+                        },
+                        bars: 'horizontal' // Required for Material Bar Charts.
+                    };
+
+                    var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+                    chart.draw(data, google.charts.Bar.convertOptions(options));
+                }
+            });
+            
+        }
     </script>
 </body>
