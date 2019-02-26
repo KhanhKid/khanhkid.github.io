@@ -1647,7 +1647,6 @@ body.menu-is-open {
  * ## header logo
  * ------------------------------------------------------------------- */
 .header-logo {
-  z-index: 501;
   display: inline-block;
   margin: 0;
   padding: 0;
