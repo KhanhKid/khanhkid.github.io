@@ -89,8 +89,8 @@
         <div class="home-content">
             <div class="row home-content__main">
                 <h1> Thống kê ý kiến</h1>
-                <h3> Đại hội Đại biểu Hội LHTN Việt Nam Phường 7 Lần thứ V Nhiệm kỳ 2019 – 2024</h3>
-                <h3> Số lượng đã biểu quyết: <span id="num_total"></span>/70</h3>
+                <h3 id="header_title"> Đại hội Đại biểu Hội LHTN Việt Nam Phường 7 Lần thứ V Nhiệm kỳ 2019 – 2024</h3>
+                <h2> Số lượng đã biểu quyết: <span id="num_total"></span>/70</h2>
                 <div class="col-six tab-full">
                     <div id="barchart_material" style="width: 1200px; height: 1200px;"></div>
                 </div>
@@ -158,22 +158,13 @@
         function load1() {
             $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!A1:C16?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs", function (response) {
                 $("#num_total").html(response.values[1][1])
+                $("#header_title").html(response.values[1][1])
                 var data = [
-                    ["Câu hỏi", "Đồng ý", "Không đồng ý"],
-                    [response.values[1][0], parseInt(response.values[1][1]), parseInt(response.values[1][2])],
-                    [response.values[2][0], parseInt(response.values[2][1]), parseInt(response.values[2][2])],
-                    [response.values[3][0], parseInt(response.values[3][1]), parseInt(response.values[3][2])],
-                    [response.values[4][0], parseInt(response.values[4][1]), parseInt(response.values[4][2])],
-                    [response.values[5][0], parseInt(response.values[5][1]), parseInt(response.values[5][2])],
-                    [response.values[6][0], parseInt(response.values[6][1]), parseInt(response.values[6][2])],
-                    [response.values[7][0], parseInt(response.values[7][1]), parseInt(response.values[7][2])],
-                    [response.values[8][0], parseInt(response.values[8][1]), parseInt(response.values[8][2])],
-                    [response.values[9][0], parseInt(response.values[9][1]), parseInt(response.values[9][2])],
-                    [response.values[10][0], parseInt(response.values[10][1]), parseInt(response.values[10][2])],
-                    [response.values[11][0], parseInt(response.values[11][1]), parseInt(response.values[11][2])],
-                    [response.values[12][0], parseInt(response.values[12][1]), parseInt(response.values[12][2])],
-                    [response.values[13][0], parseInt(response.values[13][1]), parseInt(response.values[13][2])],
+                    ["Câu hỏi", "Đồng ý", "Không đồng ý"]
                 ]
+                response.forEach(element => {
+                    data.push([element[0], parseInt(element[1]), parseInt(element[2])]);
+                });
                 var data = google.visualization.arrayToDataTable(data);
                 var view = new google.visualization.DataView(data);
                 view.setColumns([0, 1,
@@ -229,26 +220,21 @@
         function drawChart() {
             $.ajax({
                 type: "GET",
-                url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!A1:C16?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
+                url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!A1:C28?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
                 dataType: "json",
                 success: function (response) {
-                    $("#num_total").html(response.values[1][1])
+                    $("#num_total").html(response.values[0][1])
+                    var title2 = response.values[0][0];
+                    $("#header_title").html(title2)
+                    
+                    var temp = response.values;
+                    temp.shift();
                     var data = [
-                        ["Câu hỏi", "Đồng ý", "Không đồng ý"],
-                        [response.values[1][0],  parseInt(response.values[1][1]), parseInt(response.values[1][2])],
-                        [response.values[2][0],  parseInt(response.values[2][1]), parseInt(response.values[2][2])],
-                        [response.values[3][0],  parseInt(response.values[3][1]), parseInt(response.values[3][2])],
-                        [response.values[4][0],  parseInt(response.values[4][1]), parseInt(response.values[4][2])],
-                        [response.values[5][0],  parseInt(response.values[5][1]), parseInt(response.values[5][2])],
-                        [response.values[6][0],  parseInt(response.values[6][1]), parseInt(response.values[6][2])],
-                        [response.values[7][0],  parseInt(response.values[7][1]), parseInt(response.values[7][2])],
-                        [response.values[8][0],  parseInt(response.values[8][1]), parseInt(response.values[8][2])],
-                        [response.values[9][0],  parseInt(response.values[9][1]), parseInt(response.values[9][2])],
-                        [response.values[10][0], parseInt( response.values[10][1]), parseInt(response.values[10][2])],
-                        [response.values[11][0], parseInt( response.values[11][1]), parseInt(response.values[11][2])],
-                        [response.values[12][0], parseInt( response.values[12][1]), parseInt(response.values[12][2])],
-                        [response.values[13][0], parseInt( response.values[13][1]), parseInt(response.values[13][2])],
-                    ]                  
+                        ["Câu hỏi", "Đồng ý", "Không đồng ý"]
+                    ]
+                    temp.forEach(element => {
+                        if (element[0] != "") data.push([element[0], parseInt(element[1]), parseInt(element[2])]);
+                    });                 
                     var data = google.visualization.arrayToDataTable(data);
                     var view = new google.visualization.DataView(data);
                     view.setColumns([0, 1,
@@ -262,7 +248,11 @@
                     var options = {
                         chart: {
                             title: 'Biểu đồ hiệp thương',
-                            subtitle: 'Đại hội Đại biểu Hội LHTN Việt Nam Phường 7 Lần thứ V Nhiệm kỳ 2019 – 2024',
+                            subtitle: title2,
+                        }, 
+                        legend: {
+                            position: 'top',
+                            alignment: 'start'
                         },
                         hAxis: {
                             textStyle: {
@@ -276,7 +266,6 @@
                                 color: 'white',
                                 fontSize: 18, // or the number you want
                             }
-
                         },
                         isStacked: true,
                         backgroundColor: { fill: 'transparent' },
