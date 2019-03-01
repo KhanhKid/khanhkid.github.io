@@ -250,27 +250,12 @@
                             title: 'Biểu đồ hiệp thương',
                             subtitle: title2,
                         }, 
-                        legend: {
-                            position: 'top',
-                            alignment: 'start'
-                        },
-                        hAxis: {
-                            textStyle: {
-                                color: 'white',
-                                fontSize: 18, // or the number you want
-                            }
-
-                        },
-                        vAxis: {
-                            textStyle: {
-                                color: 'white',
-                                fontSize: 18, // or the number you want
-                            }
-                        },
+                        width: 600,
+                        height: 400,
+                        legend: { position: 'top', maxLines: 3 },
+                        bar: { groupWidth: '75%' },
                         isStacked: true,
-                        backgroundColor: { fill: 'transparent' },
-                        bars: 'horizontal' // Required for Material Bar Charts.
-                    };
+                      };
                     var chart = new google.visualization.ColumnChart(document.getElementById("barchart_material"));
                     chart.draw(view, options);
                 }
