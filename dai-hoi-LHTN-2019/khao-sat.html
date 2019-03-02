@@ -196,7 +196,6 @@
                     var options = {
                         chart: {
                             title: 'Biểu đồ hiệp thương',
-                            subtitle: title2,
                         }, 
                         backgroundColor: { fill:'transparent' },
                         width: 1200,
@@ -214,7 +213,6 @@
                 url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/DachSachDaiBieu!H1:I70?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
                 dataType: "json",
                 success: function (response) {
-                    var title2 = response.values[0][0];
                     var temp = response.values;
                     var arrItems = [];
                     var temp_length = temp.length;
