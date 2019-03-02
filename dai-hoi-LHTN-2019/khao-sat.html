@@ -99,7 +99,7 @@
                 <table id="danh_sach" style="color:white;">
                     <tr>
                         <td style=" text-align: center">Họ Tên:</td>
-                        <td style=" text-align: center">Đã biểu quyết</td>
+                        <td style=" text-align: center">Tình trạng</td>
                     </tr>
                 </table>
             </div>
@@ -218,7 +218,7 @@
                 success: function (response) {
                     var title2 = response.values[0][0];
                     var temp = response.values;
-                    var arrItems;
+                    var arrItems = [];
                     var temp_length = temp.length;
                     for (var i = 0, len = temp_length; i < len; i++) {
                         var element = temp[i];
