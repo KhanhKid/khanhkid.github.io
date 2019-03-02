@@ -164,9 +164,9 @@
         google.charts.load("current", {packages:['corechart']});
         google.charts.setOnLoadCallback(drawChart);
 
-        // setTimeout(function () {
-        //         drawChart();
-        //     }, 5000);
+        setTimeout(function () {
+                drawChart();
+            }, 5000);
         
         function drawChart() {
             $.ajax({
