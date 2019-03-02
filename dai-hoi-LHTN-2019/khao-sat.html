@@ -92,9 +92,18 @@
                 <h3 id="header_title"> Đại hội Đại biểu Hội LHTN Việt Nam Phường 7 Lần thứ V Nhiệm kỳ 2019 – 2024</h3>
                 <h2> Số lượng đã biểu quyết: <span id="num_total"></span>/70</h2>
                 <div class="col-six tab-full">
-                    <div id="barchart_material" style="width: 1200px; height: 1200px;"></div>
+                    <div id="barchart_material" style="width: 1200px; height: 800px;"></div>
                 </div>
+                <hr>
+                <h2> Danh sach biểu quyết</h2>
+                <table id="danh_sach" style="color:white;">
+                    <tr>
+                        <td style=" text-align: center">Họ Tên:</td>
+                        <td style=" text-align: center">Đã biểu quyết</td>
+                    </tr>
+                </table>
             </div>
+            
         </div> <!-- end home-content -->
 
         <ul class="home-social">
@@ -103,7 +112,6 @@
             </li>
         </ul> <!-- end home-social -->
     </section> <!-- end s-home -->
-
     <!-- photoswipe background
     ================================================== -->
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
@@ -154,73 +162,15 @@
         
         google.charts.load("current", {packages:['corechart']});
         google.charts.setOnLoadCallback(drawChart);
-        // load1()
-        function load1() {
-            $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!A1:C16?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs", function (response) {
-                $("#num_total").html(response.values[1][1])
-                $("#header_title").html(response.values[1][1])
-                var data = [
-                    ["Câu hỏi", "Đồng ý", "Không đồng ý"]
-                ]
-                response.forEach(element => {
-                    data.push([element[0], parseInt(element[1]), parseInt(element[2])]);
-                });
-                var data = google.visualization.arrayToDataTable(data);
-                var view = new google.visualization.DataView(data);
-                view.setColumns([0, 1,
-                    {
-                        calc: "stringify",
-                        sourceColumn: 1,
-                        type: "string",
-                        role: "annotation"
-                    },
-                    2]);
-                var options = {
-                    chart: {
-                        title: 'Biểu đồ hiệp thương',
-                        subtitle: 'Đại hội Đại biểu Hội LHTN Việt Nam Phường 7 Lần thứ V Nhiệm kỳ 2019 – 2024',
-                    },
-                    hAxis: {
-                        textStyle: {
-                            color: 'white',
-                            fontSize: 18, // or the number you want
-                        }
-                    },
-                    series: {
-                        0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
-                        1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
-                    },
-                    axes: {
-                        x: {
-                            distance: { label: 'parsecs' }, // Bottom x-axis.
-                            brightness: { side: 'top', label: 'apparent magnitude' } // Top x-axis.
-                        }
-                    },
-                    vAxis: {
-                        textStyle: {
-                            color: 'white',
-                            fontSize: 18, // or the number you want
-                        }
 
-                    },
-                    isStacked: true,
-                    backgroundColor: { fill: 'transparent' },
-                    bars: 'horizontal' // Required for Material Bar Charts.
-                };
-
-                var chart = new google.charts.Bar(document.getElementById('barchart_material'));
-
-                chart.draw(view, google.charts.Bar.convertOptions(options));
-                setTimeout(function () {
-                    load1();
-                }, 5000);
-            });
-        }
-
+        // setTimeout(function () {
+        //         drawChart();
+        //     }, 5000);
+        
         function drawChart() {
             $.ajax({
                 type: "GET",
-                url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!A1:C28?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
+                url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/Data!A1:C55?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
                 dataType: "json",
                 success: function (response) {
                     $("#num_total").html(response.values[0][1])
@@ -253,7 +203,7 @@
                         backgroundColor: { fill:'transparent' },
                         width: 1200,
                         height: 800,
-                        legend: { position: 'top', maxLines: 3 },
+                        legend: { position: 'top'},
                         bar: { groupWidth: '75%' },
                         isStacked: true,
                       };
@@ -261,7 +211,22 @@
                     chart.draw(view, options);
                 }
             });
-            
+            $.ajax({
+                type: "GET",
+                url: "https://sheets.googleapis.com/v4/spreadsheets/1b8EriDjfDLabmMAtM2CxEq_EcWlwujTzd_AgFZUj86M/values/DachSachDaiBieu!H1:I70?key=AIzaSyCDZ-MrZrZPxL1_ViziH4717Q2nLc2uxOs",
+                dataType: "json",
+                success: function (response) {
+                    var title2 = response.values[0][0];
+                    
+                    var temp = response.values;
+                    temp.forEach(element => {
+                        bieuquyet = "Đã biểu quyết";
+                        if (element[1] == "#N/A") 
+                            bieuquyet = "Chưa biểu quyết";
+                        $("#danh_sach").append("<tr><td style='text-align:center'>"+element[0]+"</td><td style='text-align: center'>"+bieuquyet+"</td></tr>");
+                    })
+                }
+            });
         }
     </script>
 </body>
