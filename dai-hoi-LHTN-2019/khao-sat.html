@@ -163,11 +163,13 @@
         
         google.charts.load("current", {packages:['corechart']});
         google.charts.setOnLoadCallback(drawChart);
-
-        setTimeout(function () {
+        refreshchart();
+        function refreshchart() {
+            setTimeout(function () {
                 drawChart();
             }, 5000);
         
+        }
         function drawChart() {
             $.ajax({
                 type: "GET",
