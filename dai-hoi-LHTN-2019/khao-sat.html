@@ -217,11 +217,19 @@
                 dataType: "json",
                 success: function (response) {
                     var title2 = response.values[0][0];
-                    
                     var temp = response.values;
+                    var arrItems;
                     temp.forEach(element => {
-                        bieuquyet = "Đã biểu quyết";
                         if (element[1] == "#N/A") 
+                            arrItems.unshift([element[0], element[1]]);
+                        else
+                            arrItems.push([element[0], element[1]]);
+                        $("#danh_sach").append("<tr><td style='text-align:center'>"+element[0]+"</td><td style='text-align: center'>"+bieuquyet+"</td></tr>");
+                    })
+                    
+                    arrItems.forEach(element => {
+                        bieuquyet = "Đã biểu quyết";
+                        if (element[1] == "#N/A")
                             bieuquyet = "Chưa biểu quyết";
                         $("#danh_sach").append("<tr><td style='text-align:center'>"+element[0]+"</td><td style='text-align: center'>"+bieuquyet+"</td></tr>");
                     })
