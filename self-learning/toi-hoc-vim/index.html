@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Tôi học Vim - KhanhKid&#39;s blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Tôi học Vim" />
+<meta property="og:description" content="Ngẫm cuộc đời chắc sẽ gắn bó với Linux cũng nhiều nên thôi nay mình tỉm hiểu học về Vim. Đó giờ thường dùng nhất vẫn là Nano mà cũng có nhiều bất tiện vì Nano không phải là default của Linux cho lắm.
+Ngồi nghĩ thôi chi bằng ngồi học Vim để cập nhật theo thời đại vậy.
+Vim thì mình follow theo vimtour nếu bạn nào hứng thú thì có thể gõ lệnh này trên command line sẽ ra hướng dẫn luôn." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://khanhkid.github.io/self-learning/toi-hoc-vim/" />
+<meta property="article:published_time" content="2019-07-17T16:46:58&#43;07:00"/>
+<meta property="article:modified_time" content="2019-07-17T16:46:58&#43;07:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tôi học Vim"/>
+<meta name="twitter:description" content="Ngẫm cuộc đời chắc sẽ gắn bó với Linux cũng nhiều nên thôi nay mình tỉm hiểu học về Vim. Đó giờ thường dùng nhất vẫn là Nano mà cũng có nhiều bất tiện vì Nano không phải là default của Linux cho lắm.
+Ngồi nghĩ thôi chi bằng ngồi học Vim để cập nhật theo thời đại vậy.
+Vim thì mình follow theo vimtour nếu bạn nào hứng thú thì có thể gõ lệnh này trên command line sẽ ra hướng dẫn luôn."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:500,100,300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" type="image/png" href="/img/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" /><script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script><script src="/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title">KhanhKid&#39;s blog</h1>
+	<div class="site-description"><h2>Sooner better than later</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/khanhkid" title="Github"><i data-feather="github"></i></a><a href="https://www.linkedin.com/in/khanhkid/" title="Linkedin"><i data-feather="linkedin"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/personal">Old Blog</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Tôi học Vim</h1>
+			<div class="meta">Posted at &mdash; Jul 17, 2019</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<p>Ngẫm cuộc đời chắc sẽ gắn bó với Linux cũng nhiều nên thôi nay mình tỉm hiểu học về <code>Vim</code>. Đó giờ thường dùng nhất vẫn là <code>Nano</code> mà cũng có nhiều bất tiện vì <code>Nano</code> không phải là default của Linux cho lắm.</p>
+
+<p>Ngồi nghĩ thôi chi bằng ngồi học <code>Vim</code> để cập nhật theo thời đại vậy.</p>
+
+<p><code>Vim</code> thì mình follow theo <code>vimtour</code> nếu bạn nào hứng thú thì có thể gõ lệnh này trên command line sẽ ra hướng dẫn luôn.</p>
+
+<h2 id="basic">BASIC</h2>
+
+<ol>
+<li>Nhấn <code>Esc</code> để trở về Normal mode</li>
+
+<li><p>Về cách di chuyển cursor (thường thì mình dùng mấy phím mũi tên nhiều hơn)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">h (left) j (down)  k (up) l (right)</pre></div></li>
+
+<li><p>Chỉnh sửa</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">i - chỉnh sửa tại vị trí cursor
+A - chuyển qua mode chỉnh sửa và di chuyển cursor đến Endline</pre></div></li>
+
+<li><p>Cách lưu sau khi chỉnh sữa</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;ESC&gt;  +  :q!   &lt;ENTER&gt;  to trash all changes.
+&lt;ESC&gt;  + :wq   &lt;ENTER&gt;  to save the changes.</pre></div></li>
+
+<li><p>Undo and Redo</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">u - Undo last action
+U - Undo tất cả thai đổi trên dòng
+Ctrl + r - Redo</pre></div></li>
+</ol>
+
+<h2 id="editor">EDITOR</h2>
+
+<h3 id="moving-cursor">MOVING CURSOR</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    2w to move the cursor two words forward
+    3e  to move the cursor to the end of the third word forward.
+    0  (zero) to move to the start of the line.</pre></div>
+<h3 id="deletion">DELETION</h3>
+
+<p>Di chuyển Cursor đến nơi cần xoá</p>
+
+<p>Character</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    x -  xoá 1 ký tự 
+
+    dw - Delete word và next character
+    de - Delete just word 
+    d$ - Delete từ cursor đến end line
+    d [num] [e|w|$] - số lượng muốn delete  
+
+    dd - xoá dòng
+
+    c [num] [e|w|$]  deletes the word and places you in Insert mode</pre></div>
+<h3 id="copy-and-paste">COPY AND PASTE</h3>
+
+<p>Sau khi <code>d [e|d|$]</code> thì dòng xoá hay ký tự sẽ được lưu lại trong <code>Vim register</code> dùng</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    `p` để in `Vim register` ra -&gt; Dạng như Cut</pre></div>
+<h3 id="cursor-location-and-file-status">CURSOR LOCATION AND FILE STATUS</h3>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    Ctrl + G : hiển thị location và file status
+    G: di chuyển cursor to end line file
+    gg: di chuyển cursor to start file</pre></div>
+<p>To Be Continues 4.2</p>
+
+		</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'khanhkid';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div><a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+<script>feather.replace()</script>
+</body>
+</html>
