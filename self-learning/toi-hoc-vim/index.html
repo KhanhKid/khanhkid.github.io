@@ -52,10 +52,6 @@ Vim thì mình follow theo vimtutor nếu bạn nào hứng thú thì có thể 
 				<a href="/tags">Tags</a>
 			</li>
 			
-			<li>
-				<a href="/personal">Old Blog</a>
-			</li>
-			
 		</ul>
 	</nav>
 </div>
@@ -66,7 +62,6 @@ Vim thì mình follow theo vimtutor nếu bạn nào hứng thú thì có thể 
 			<div class="meta">Posted at &mdash; Jul 17, 2019</div>
 		</div>
 
-		
 		<div class="markdown">
 			
 
@@ -110,11 +105,14 @@ Ctrl + r - Redo</pre></div></li>
 
 <h2 id="editor">EDITOR</h2>
 
-<h3 id="moving-cursor">MOVING CURSOR</h3>
+<h3 id="di-chuyển-cursor">Di chuyển cursor</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    2w to move the cursor two words forward
     3e  to move the cursor to the end of the third word forward.
-    0  (zero) to move to the start of the line.</pre></div>
-<h3 id="deletion">DELETION</h3>
+    0  (zero) to move to the start of the line.
+    G: di chuyển cursor to end line file
+    gg: di chuyển cursor to start file      
+    Ctrl + G : hiển thị location và file status        </pre></div>
+<h3 id="xoá">Xoá</h3>
 
 <p>Di chuyển Cursor đến nơi cần xoá</p>
 
@@ -133,7 +131,7 @@ Ctrl + r - Redo</pre></div></li>
 
 <p>Sau khi <code>d [e|d|$]</code> thì dòng xoá hay ký tự sẽ được lưu lại trong <code>Vim register</code> dùng</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    `p` để in `Vim register` ra -&gt; Dạng như Cut</pre></div>
-<h3 id="cursor-location-and-file-status">CURSOR LOCATION AND FILE STATUS</h3>
+<h3 id="di-chuyển-cursor-và-thông-tin-file">Di chuyển cursor và thông tin file</h3>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    Ctrl + G : hiển thị location và file status
     G: di chuyển cursor to end line file
     gg: di chuyển cursor to start file</pre></div>
@@ -151,11 +149,31 @@ Ctrl + r - Redo</pre></div></li>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    :![command]: chạy hàm command khi trong giao diện vim
             :!ls 
             :!pwd</pre></div>
-<h1 id="summary">Summary</h1>
+<h1 id="summary">SUMMARY</h1>
 
-<p>Tổng hợp cơ bản những về những hàm mình thấy hữu ích trong <code>Vim</code> và theo <code>vimtutor</code>. Nếu các muốn nâng cao hơn thì có thể vào trực tiếp <code>vimtutor</code> để xem nhé. Cảm ơn các bạn đã đọc đến đây.
-Thân</p>
+<p>Tổng hợp cơ bản những về những hàm mình thấy hữu ích trong <code>Vim</code> và theo <code>vimtutor</code>. Nếu các muốn nâng cao hơn thì có thể vào trực tiếp <code>vimtutor</code> để xem nhé. Cảm ơn các bạn đã đọc đến đây.</p>
 
+			<aside>
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#overview">OVERVIEW</a></li>
+<li><a href="#vào-phần-chính">VÀO PHẦN CHÍNH</a>
+<ul>
+<li><a href="#basic">BASIC</a></li>
+<li><a href="#editor">EDITOR</a>
+<ul>
+<li><a href="#di-chuyển-cursor">Di chuyển cursor</a></li>
+<li><a href="#xoá">Xoá</a></li>
+<li><a href="#copy-and-paste">COPY AND PASTE</a></li>
+<li><a href="#di-chuyển-cursor-và-thông-tin-file">Di chuyển cursor và thông tin file</a></li>
+</ul></li>
+<li><a href="#tìm-kiếm-searching">Tìm kiếm - Searching</a></li>
+<li><a href="#thực-thi-command-trong-vim">Thực thi Command trong VIM</a></li>
+</ul></li>
+<li><a href="#summary">SUMMARY</a></li>
+</ul>
+</nav>
+			</aside>
 		</div><div id="disqus_thread"></div>
 <script type="text/javascript">
 	(function () {

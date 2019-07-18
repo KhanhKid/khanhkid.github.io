@@ -9,6 +9,12 @@
   </url>
   
   <url>
+    <loc>https://khanhkid.github.io/tags/</loc>
+    <lastmod>2019-07-17T16:46:58+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://khanhkid.github.io/self-learning/toi-hoc-vim/</loc>
     <lastmod>2019-07-17T16:46:58+07:00</lastmod>
   </url>
@@ -20,24 +26,18 @@
   </url>
   
   <url>
+    <loc>https://khanhkid.github.io/tags/vim-editor-linux/</loc>
+    <lastmod>2019-07-17T16:46:58+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://khanhkid.github.io/posts/my-first-post/</loc>
     <lastmod>2019-07-15T15:02:04+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://khanhkid.github.io/posts/</loc>
-    <lastmod>2019-07-15T15:02:04+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://khanhkid.github.io/tags/</loc>
-    <lastmod>2019-07-15T15:02:04+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://khanhkid.github.io/tags/test/</loc>
     <lastmod>2019-07-15T15:02:04+07:00</lastmod>
     <priority>0</priority>
   </url>
