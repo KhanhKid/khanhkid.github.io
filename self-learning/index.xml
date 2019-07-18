@@ -6,10 +6,24 @@
     <description>Recent content in Self-learnings on Tôi học làm DevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jul 2019 16:46:58 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jul 2019 23:17:30 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/self-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tạo Blog Cá Nhân bằng Github Page vs Staticgen</title>
+      <link>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</link>
+      <pubDate>Thu, 18 Jul 2019 23:17:30 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</guid>
+      <description>Requirement Github Page: https://pages.github.com/
+Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. Khi bạn tạo 1 trang website tĩnh của github.io là [username].github.io. Giống như trang blog của mình nó là https://khanhkid.github.io.
+Hugo: https://www.staticgen.com/hugo
+Hugo is a static site generator written in Go
+Git và một chút kiến thức về Markdown
+Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages.</description>
+    </item>
     
     <item>
       <title>Tôi học Vim</title>
