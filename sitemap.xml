@@ -15,19 +15,25 @@
   </url>
   
   <url>
+    <loc>https://khanhkid.github.io/tags/</loc>
+    <lastmod>2019-07-19T14:02:36+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://khanhkid.github.io/posts/movies/phim-hay-minh-da-xem/</loc>
     <lastmod>2019-07-19T14:02:36+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://khanhkid.github.io/posts/self-learning/tao-blog-github-page-vs-staticgen/</loc>
-    <lastmod>2019-07-18T23:17:30+07:00</lastmod>
+    <loc>https://khanhkid.github.io/tags/movies/</loc>
+    <lastmod>2019-07-19T14:02:36+07:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://khanhkid.github.io/tags/</loc>
-    <lastmod>2019-07-17T16:46:58+07:00</lastmod>
-    <priority>0</priority>
+    <loc>https://khanhkid.github.io/posts/self-learning/tao-blog-github-page-vs-staticgen/</loc>
+    <lastmod>2019-07-18T23:17:30+07:00</lastmod>
   </url>
   
   <url>
