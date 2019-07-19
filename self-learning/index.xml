@@ -18,7 +18,7 @@
       
       <guid>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</guid>
       <description>Requirement Github Page: https://pages.github.com/
-Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. Khi bạn tạo 1 trang website tĩnh của github.io là [username].github.io. Giống như trang blog của mình nó là https://khanhkid.github.io.
+Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. github.io sẽ để trang website của chúng ta dưới tên 1 subdomain [username].github.io. Giống như trang blog của mình nó là https://khanhkid.github.io.
 Hugo: https://www.staticgen.com/hugo
 Hugo is a static site generator written in Go
 Git và một chút kiến thức về Markdown
