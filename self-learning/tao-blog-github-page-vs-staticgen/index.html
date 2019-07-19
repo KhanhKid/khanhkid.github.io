@@ -105,8 +105,8 @@ Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages."/>
 
 <p>Giới thiệu về  structure của HUGO</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    .
-    ├── archetypes      # chứa mẫu của 1 bài post title, date, draft ... khi dùng hugo new [post-name]
-    ├── config.toml     # chứa config khi hugo generate  dùng lệnh hugo
+    ├── archetypes      # chứa mẫu của 1 bài post title, date, draft ... khi dùng `hugo new [post-name]`
+    ├── config.toml     # chứa config variable khi hugo generate dùng lệnh `hugo`
     ├── content         # chứa nội dung các bài viết
     ├── data            # optional
     ├── layouts         # optional
@@ -118,17 +118,31 @@ Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages."/>
 
 <p>Trong 1 theme thường sẽ có 2 phần chính</p>
 
-<p>Cách cài đặt</p>
+<p>Cách cài đặt và file <code>config.toml</code>.</p>
 
-<p>File config.toml</p>
+<p>2 phần này sẽ được miêu tả chi tiết trong github của từng theme.</p>
 
 <h2 id="tạo-bài-post">Tạo bài post</h2>
 
 <p>Khởi tạo server</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    hugo server</pre></div>
+<p>Sau khi run thì server thông thường sẽ hiển thị ở consolog đường link của test server. Thường sẽ là <a href="http://localhost:1313/">http://localhost:1313/</a></p>
+
 <p>Tạo 1 bài post mới</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    hugo new [post-name].md</pre></div>
 <p>Sau khi chạy hàm trên sẽ tạo ra 1 file <code>[post-name].md</code> trong thư mục <code>content/posts</code></p>
+
+<p>Tiếp theo là giai đoạn dùng <code>Markdown</code> style để viết bài post</p>
+
+<h2 id="generate-blog">Generate blog</h2>
+
+<p>Sau quá trình chỉnh sửa vào viết <code>gì đó</code> thì chúng ta sẽ đến công đoạn cuối cùng là Generate blog từ <code>Markdown</code> -&gt; <code>website tĩnh</code>. Lệnh để generate.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">    hugo </pre></div>
+<p>Sau khi generate thì website tĩnh sẽ được tạo trong thư mục <code>public</code>. Nhiệm vụ cuối cùng của chúng ta sẽ là copy toàn bộ file trong <code>public</code> và Repo <code>[username].github.io</code></p>
+
+<h1 id="summary">Summary</h1>
+
+<p>Về căn bản chúng ta đã tạo được 1 blog tĩnh từ <code>Hugo</code> và có thể dùng nó để làm nơi note, lữu trữ những bài viết của mình cũng như share cho mọi người về những kiến thức của chúng ta.</p>
 
 			
 			<aside>
@@ -140,7 +154,9 @@ Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages."/>
 <li><a href="#structure-hugo">Structure Hugo</a></li>
 <li><a href="#cài-đặt-themes">Cài Đặt Themes</a></li>
 <li><a href="#tạo-bài-post">Tạo bài post</a></li>
+<li><a href="#generate-blog">Generate blog</a></li>
 </ul></li>
+<li><a href="#summary">Summary</a></li>
 </ul>
 </nav>
 			</aside>
