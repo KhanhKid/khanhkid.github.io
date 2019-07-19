@@ -13,10 +13,10 @@
     
     <item>
       <title>Tổng hợp phim hay</title>
-      <link>https://khanhkid.github.io/movies/phim-hay-minh-da-xem/</link>
+      <link>https://khanhkid.github.io/posts/movies/phim-hay-minh-da-xem/</link>
       <pubDate>Fri, 19 Jul 2019 14:02:36 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/movies/phim-hay-minh-da-xem/</guid>
+      <guid>https://khanhkid.github.io/posts/movies/phim-hay-minh-da-xem/</guid>
       <description>Động lực làm việc:
 The Blind Side (Góc khuất - 2009) The Shawshank Redemption (1994) - (Nên xem) The Pursuit of Happiness – Mưu cầu hạnh phúc Pretty Woman (1990) Bố Gìa (3 version) Travel
 The beach (2000) Into the Wild Jungle the secret life of walter mitty 127 Hours Hack Não
@@ -26,10 +26,10 @@ Interstellar (2014) The March Gravity (2013) I Robot 2004 Cloverfield (thứ t�
     
     <item>
       <title>Tạo Blog Cá Nhân bằng Github Page vs Staticgen</title>
-      <link>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</link>
+      <link>https://khanhkid.github.io/posts/self-learning/tao-blog-github-page-vs-staticgen/</link>
       <pubDate>Thu, 18 Jul 2019 23:17:30 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</guid>
+      <guid>https://khanhkid.github.io/posts/self-learning/tao-blog-github-page-vs-staticgen/</guid>
       <description>Requirement Github Page: https://pages.github.com/
 Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. github.io sẽ để trang website của chúng ta dưới tên 1 subdomain [username].github.io. Giống như trang blog của mình là https://khanhkid.github.io.
 Hugo: https://www.staticgen.com/hugo Hugo is a static site generator written in Go
@@ -39,10 +39,10 @@ Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages.</descri
     
     <item>
       <title>Tôi học Vim</title>
-      <link>https://khanhkid.github.io/self-learning/toi-hoc-vim/</link>
+      <link>https://khanhkid.github.io/posts/self-learning/toi-hoc-vim/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/self-learning/toi-hoc-vim/</guid>
+      <guid>https://khanhkid.github.io/posts/self-learning/toi-hoc-vim/</guid>
       <description>OVERVIEW Ngẫm cuộc đời chắc sẽ gắn bó với Linux cũng nhiều nên thôi nay mình tìm hiểu và học về Vim. Đó giờ thường dùng nhất vẫn là Nano mà cũng có nhiều bất tiện vì Nano không phải là default của Linux nên lần nào connect lên là phải cài thêm.
 Ngồi nghĩ thôi chi bằng ngồi học Vim để cập nhật theo thời đại vậy.
 Vim thì mình follow theo vimtutor nếu bạn nào hứng thú thì có thể gõ lệnh này trên command line sẽ ra hướng dẫn chi tiết.</description>
