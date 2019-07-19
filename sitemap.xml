@@ -3,13 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://khanhkid.github.io/self-learning/</loc>
-    <lastmod>2019-07-18T23:17:30+07:00</lastmod>
+    <loc>https://khanhkid.github.io/movies/</loc>
+    <lastmod>2019-07-19T14:02:36+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://khanhkid.github.io/</loc>
+    <lastmod>2019-07-19T14:02:36+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://khanhkid.github.io/movies/phim-hay-minh-da-xem/</loc>
+    <lastmod>2019-07-19T14:02:36+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://khanhkid.github.io/self-learning/</loc>
     <lastmod>2019-07-18T23:17:30+07:00</lastmod>
     <priority>0</priority>
   </url>

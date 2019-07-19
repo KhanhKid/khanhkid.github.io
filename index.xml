@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tôi học làm DevOps</title>
+    <title>Nơi tui viết chuyện đời </title>
     <link>https://khanhkid.github.io/</link>
-    <description>Recent content on Tôi học làm DevOps</description>
+    <description>Recent content on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jul 2019 23:17:30 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2019 14:02:36 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tổng hợp phim hay</title>
+      <link>https://khanhkid.github.io/movies/phim-hay-minh-da-xem/</link>
+      <pubDate>Fri, 19 Jul 2019 14:02:36 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/movies/phim-hay-minh-da-xem/</guid>
+      <description>Động lực làm việc:
+The Blind Side (Góc khuất - 2009) The Shawshank Redemption (1994) - (Nên xem) The Pursuit of Happiness – Mưu cầu hạnh phúc Pretty Woman (1990) Bố Gìa (3 version) Travel
+The beach (2000) Into the Wild Jungle the secret life of walter mitty 127 Hours Hack Não
+Split (2017) - Tách Biệt The invisible Guest - Án Mạng Vô Hình  Viễn tưởng
+Interstellar (2014) The March Gravity (2013) I Robot 2004 Cloverfield (thứ tự xem 3 1 2) Siêu bão địa cầu Core Tâm Trái Đất 2003 Thái</description>
+    </item>
     
     <item>
       <title>Tạo Blog Cá Nhân bằng Github Page vs Staticgen</title>
