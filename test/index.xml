@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>demo hugo staticgen</title>
-    <link>http://example.org/</link>
+    <link>http://khanhkid.github.io/test/</link>
     <description>Recent content on demo hugo staticgen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Jul 2019 17:08:58 +0700</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://khanhkid.github.io/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test</title>
-      <link>http://example.org/posts/test/</link>
+      <link>http://khanhkid.github.io/test/posts/test/</link>
       <pubDate>Fri, 19 Jul 2019 17:08:58 +0700</pubDate>
       
-      <guid>http://example.org/posts/test/</guid>
+      <guid>http://khanhkid.github.io/test/posts/test/</guid>
       <description>fdasdfas this is test
 this header  quota
  code space  test abc</description>
@@ -24,10 +24,10 @@ this header  quota
     
     <item>
       <title>tets</title>
-      <link>http://example.org/firstblog/</link>
+      <link>http://khanhkid.github.io/test/firstblog/</link>
       <pubDate>Fri, 19 Jul 2019 17:07:03 +0700</pubDate>
       
-      <guid>http://example.org/firstblog/</guid>
+      <guid>http://khanhkid.github.io/test/firstblog/</guid>
       <description>this is tes</description>
     </item>
     
