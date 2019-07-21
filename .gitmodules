@@ -1,3 +1,0 @@
-[submodule "module/hugo-generate"]
-	path = module/hugo-generate
-	url = https://github.com/khanhkid/hugo-website.git
