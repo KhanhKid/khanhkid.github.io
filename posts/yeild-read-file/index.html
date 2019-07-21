@@ -5,7 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Yeild Read File - Tôi học làm DevOps</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="Yeild Read File" />
 <meta property="og:description" content="Benchmark readfile with normal way and yeild
-1000000line Normal: 0 B - 0.12738299369812 Yeild: 136.02 MiB - 0.141597032547 100000line Normal: 0 B - 0.013264179229736 Yeild: 11.18 MiB - 0.011452913284302 10000line Normal: 0 B - 0.0013930797576904 Yeild: 1.2 MiB - 0.0010578632354736 1000line Normal: 0 B - 0.00021696090698242 Yeild: 112.84 KiB - 0.00014495849609375 100line Normal: 0 B - 0.00013208389282227 Yeild: 0 B - 5.5074691772461E-5 " />
+1000000line Normal: 0 B - 0.12738299369812 Yeild: 136.02 MiB - 0.141597032547 100000line Normal: 0 B - 0.013264179229736 Yeild: 11.18 MiB - 0.011452913284302 10000line Normal: 0 B - 0.0013930797576904 Yeild: 1.2 MiB - 0.0010578632354736 1000line Normal: 0 B - 0.00021696090698242 Yeild: 112.84 KiB - 0.00014495849609375 100line Normal: 0 B - 0.00013208389282227 Yeild: 0 B - 5.5074691772461E-5   Source Code
+ function file_lines($filename) { $file = fopen($filename, &#39;r&#39;); while (($line = fgets($file)) !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://khanhkid.github.io/posts/yeild-read-file/" />
 
@@ -27,7 +28,8 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Yeild Read File"/>
 <meta name="twitter:description" content="Benchmark readfile with normal way and yeild
-1000000line Normal: 0 B - 0.12738299369812 Yeild: 136.02 MiB - 0.141597032547 100000line Normal: 0 B - 0.013264179229736 Yeild: 11.18 MiB - 0.011452913284302 10000line Normal: 0 B - 0.0013930797576904 Yeild: 1.2 MiB - 0.0010578632354736 1000line Normal: 0 B - 0.00021696090698242 Yeild: 112.84 KiB - 0.00014495849609375 100line Normal: 0 B - 0.00013208389282227 Yeild: 0 B - 5.5074691772461E-5 "/>
+1000000line Normal: 0 B - 0.12738299369812 Yeild: 136.02 MiB - 0.141597032547 100000line Normal: 0 B - 0.013264179229736 Yeild: 11.18 MiB - 0.011452913284302 10000line Normal: 0 B - 0.0013930797576904 Yeild: 1.2 MiB - 0.0010578632354736 1000line Normal: 0 B - 0.00021696090698242 Yeild: 112.84 KiB - 0.00014495849609375 100line Normal: 0 B - 0.00013208389282227 Yeild: 0 B - 5.5074691772461E-5   Source Code
+ function file_lines($filename) { $file = fopen($filename, &#39;r&#39;); while (($line = fgets($file)) !"/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:500,100,300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
 
@@ -91,6 +93,51 @@
 100line
     Normal: 0 B - 0.00013208389282227 
     Yeild: 0 B - 5.5074691772461E-5 </pre></div>
+<blockquote>
+<p>Source Code</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">function file_lines($filename) {
+    $file = fopen($filename, &#39;r&#39;); 
+    while (($line = fgets($file)) !== false) {
+        yield $line; 
+    } 
+    fclose($file); 
+}
+function microtime_float()
+{
+    list($usec, $sec) = explode(&#34; &#34;, microtime());
+    return ((float)$usec + (float)$sec);
+}
+function getNiceFileSize($bytes, $binaryPrefix=true) {
+    if ($binaryPrefix) {
+        $unit=array(&#39;B&#39;,&#39;KiB&#39;,&#39;MiB&#39;,&#39;GiB&#39;,&#39;TiB&#39;,&#39;PiB&#39;);
+        if ($bytes==0) return &#39;0 &#39; . $unit[0];
+        return @round($bytes/pow(1024,($i=floor(log($bytes,1024)))),2) .&#39; &#39;. (isset($unit[$i]) ? $unit[$i] : &#39;B&#39;);
+    } else {
+        $unit=array(&#39;B&#39;,&#39;KB&#39;,&#39;MB&#39;,&#39;GB&#39;,&#39;TB&#39;,&#39;PB&#39;);
+        if ($bytes==0) return &#39;0 &#39; . $unit[0];
+        return @round($bytes/pow(1000,($i=floor(log($bytes,1000)))),2) .&#39; &#39;. (isset($unit[$i]) ? $unit[$i] : &#39;B&#39;);
+    }
+}
+
+
+
+// WithYeild
+$time_start = microtime_float();
+$m = memory_get_peak_usage();
+foreach (file_lines(&#39;data/1000000line.txt&#39;) as $l);
+$time_end = microtime_float();
+$time = $time_end - $time_start;
+echo getNiceFileSize(memory_get_peak_usage() - $m), &#34; - $time \n&#34;;
+
+// Normal
+$time_start = microtime_float();
+$m = memory_get_peak_usage();
+foreach (file(&#39;data/1000000line.txt&#39;) as $l);
+$time_end = microtime_float();
+$time = $time_end - $time_start;
+echo getNiceFileSize(memory_get_peak_usage() - $m), &#34; - $time \n&#34;;
+?&gt;</pre></div>
 			
 			<aside>
 				
