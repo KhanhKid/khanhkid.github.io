@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nơi tui viết chuyện đời </title>
+    <title>Tôi học làm DevOps</title>
     <link>https://khanhkid.github.io/</link>
-    <description>Recent content on Nơi tui viết chuyện đời </description>
+    <description>Recent content on Tôi học làm DevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 14:02:36 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jul 2019 23:43:50 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Tổng hợp phim hay</title>
-      <link>https://khanhkid.github.io/posts/movies/phim-hay-minh-da-xem/</link>
-      <pubDate>Fri, 19 Jul 2019 14:02:36 +0700</pubDate>
+      <title>Yeild Read File</title>
+      <link>https://khanhkid.github.io/posts/yeild-read-file/</link>
+      <pubDate>Sun, 21 Jul 2019 23:43:50 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/posts/movies/phim-hay-minh-da-xem/</guid>
-      <description>Động lực làm việc:
-The Blind Side (Góc khuất - 2009) The Shawshank Redemption (1994) - (Nên xem) The Pursuit of Happiness – Mưu cầu hạnh phúc Pretty Woman (1990) Bố Gìa (3 version) Travel
-The beach (2000) Into the Wild Jungle the secret life of walter mitty 127 Hours Hack Não
-Split (2017) - Tách Biệt The invisible Guest - Án Mạng Vô Hình  Viễn tưởng
-Interstellar (2014) The March Gravity (2013) I Robot 2004 Cloverfield (thứ tự xem 3 1 2) Siêu bão địa cầu Core Tâm Trái Đất 2003 Thái</description>
+      <guid>https://khanhkid.github.io/posts/yeild-read-file/</guid>
+      <description>Benchmark readfile with normal way and yeild
+1000000line Normal: 0 B - 0.12738299369812 Yeild: 136.02 MiB - 0.141597032547 100000line Normal: 0 B - 0.013264179229736 Yeild: 11.18 MiB - 0.011452913284302 10000line Normal: 0 B - 0.0013930797576904 Yeild: 1.2 MiB - 0.0010578632354736 1000line Normal: 0 B - 0.00021696090698242 Yeild: 112.84 KiB - 0.00014495849609375 100line Normal: 0 B - 0.00013208389282227 Yeild: 0 B - 5.5074691772461E-5 </description>
     </item>
     
     <item>
-      <title>Tạo blog cá nhân bằng Github Page vs Staticgen</title>
-      <link>https://khanhkid.github.io/posts/self-learning/tao-blog-github-page-vs-staticgen/</link>
+      <title>Tạo Blog Cá Nhân bằng Github Page vs Staticgen</title>
+      <link>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</link>
       <pubDate>Thu, 18 Jul 2019 23:17:30 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/posts/self-learning/tao-blog-github-page-vs-staticgen/</guid>
+      <guid>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</guid>
       <description>Requirement Github Page: https://pages.github.com/
-Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. github.io sẽ để trang website của chúng ta dưới tên 1 subdomain [username].github.io. Giống như trang blog của mình là https://khanhkid.github.io.
-Hugo: https://www.staticgen.com/hugo Hugo is a static site generator written in Go
-Git và một chút kiến thức về Markdown style có thể xem ở đây
+Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. Khi bạn tạo 1 trang website tĩnh của github.io là [username].github.io. Giống như trang blog của mình nó là https://khanhkid.github.io.
+Hugo: https://www.staticgen.com/hugo
+Hugo is a static site generator written in Go
+Git và một chút kiến thức về Markdown
 Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages.</description>
     </item>
     
     <item>
       <title>Tôi học Vim</title>
-      <link>https://khanhkid.github.io/posts/self-learning/toi-hoc-vim/</link>
+      <link>https://khanhkid.github.io/self-learning/toi-hoc-vim/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/posts/self-learning/toi-hoc-vim/</guid>
+      <guid>https://khanhkid.github.io/self-learning/toi-hoc-vim/</guid>
       <description>OVERVIEW Ngẫm cuộc đời chắc sẽ gắn bó với Linux cũng nhiều nên thôi nay mình tìm hiểu và học về Vim. Đó giờ thường dùng nhất vẫn là Nano mà cũng có nhiều bất tiện vì Nano không phải là default của Linux nên lần nào connect lên là phải cài thêm.
 Ngồi nghĩ thôi chi bằng ngồi học Vim để cập nhật theo thời đại vậy.
 Vim thì mình follow theo vimtutor nếu bạn nào hứng thú thì có thể gõ lệnh này trên command line sẽ ra hướng dẫn chi tiết.</description>

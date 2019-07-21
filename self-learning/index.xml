@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Self-learnings on Nơi tui viết chuyện đời </title>
+    <title>Self-learnings on Tôi học làm DevOps</title>
     <link>https://khanhkid.github.io/self-learning/</link>
-    <description>Recent content in Self-learnings on Nơi tui viết chuyện đời </description>
+    <description>Recent content in Self-learnings on Tôi học làm DevOps</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Jul 2019 23:17:30 +0700</lastBuildDate>
@@ -18,9 +18,10 @@
       
       <guid>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</guid>
       <description>Requirement Github Page: https://pages.github.com/
-Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. github.io sẽ để trang website của chúng ta dưới tên 1 subdomain [username].github.io. Giống như trang blog của mình là https://khanhkid.github.io.
-Hugo: https://www.staticgen.com/hugo Hugo is a static site generator written in Go
-Git và một chút kiến thức về Markdown style có thể xem ở đây
+Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. Khi bạn tạo 1 trang website tĩnh của github.io là [username].github.io. Giống như trang blog của mình nó là https://khanhkid.github.io.
+Hugo: https://www.staticgen.com/hugo
+Hugo is a static site generator written in Go
+Git và một chút kiến thức về Markdown
 Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages.</description>
     </item>
     
