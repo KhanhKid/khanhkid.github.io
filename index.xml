@@ -23,10 +23,10 @@
     
     <item>
       <title>Tạo Blog Cá Nhân bằng Github Page vs Staticgen</title>
-      <link>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</link>
+      <link>https://khanhkid.github.io/posts/tao-blog-github-page-vs-staticgen/</link>
       <pubDate>Thu, 18 Jul 2019 23:17:30 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/self-learning/tao-blog-github-page-vs-staticgen/</guid>
+      <guid>https://khanhkid.github.io/posts/tao-blog-github-page-vs-staticgen/</guid>
       <description>Requirement Github Page: https://pages.github.com/
 Github Page là một nơi github chia sẽ cho developer một resource để build 1 trang website tĩnh. Khi bạn tạo 1 trang website tĩnh của github.io là [username].github.io. Giống như trang blog của mình nó là https://khanhkid.github.io.
 Hugo: https://www.staticgen.com/hugo
@@ -37,10 +37,10 @@ Installing  Tạo 1 trang Github Page theo hướng dẫn https://pages.</descri
     
     <item>
       <title>Tôi học Vim</title>
-      <link>https://khanhkid.github.io/self-learning/toi-hoc-vim/</link>
+      <link>https://khanhkid.github.io/posts/toi-hoc-vim/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/self-learning/toi-hoc-vim/</guid>
+      <guid>https://khanhkid.github.io/posts/toi-hoc-vim/</guid>
       <description>OVERVIEW Ngẫm cuộc đời chắc sẽ gắn bó với Linux cũng nhiều nên thôi nay mình tìm hiểu và học về Vim. Đó giờ thường dùng nhất vẫn là Nano mà cũng có nhiều bất tiện vì Nano không phải là default của Linux nên lần nào connect lên là phải cài thêm.
 Ngồi nghĩ thôi chi bằng ngồi học Vim để cập nhật theo thời đại vậy.
 Vim thì mình follow theo vimtutor nếu bạn nào hứng thú thì có thể gõ lệnh này trên command line sẽ ra hướng dẫn chi tiết.</description>
