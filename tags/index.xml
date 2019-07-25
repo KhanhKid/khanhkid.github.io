@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Tôi học làm DevOps</title>
+    <title>Tags on Nơi tui viết chuyện đời </title>
     <link>https://khanhkid.github.io/tags/</link>
-    <description>Recent content in Tags on Tôi học làm DevOps</description>
+    <description>Recent content in Tags on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jul 2019 23:43:50 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jul 2019 14:02:36 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Benchmark</title>
-      <link>https://khanhkid.github.io/tags/benchmark/</link>
-      <pubDate>Sun, 21 Jul 2019 23:43:50 +0700</pubDate>
+      <title>movies</title>
+      <link>https://khanhkid.github.io/tags/movies/</link>
+      <pubDate>Fri, 19 Jul 2019 14:02:36 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/tags/benchmark/</guid>
+      <guid>https://khanhkid.github.io/tags/movies/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Editor</title>
+      <title>editor</title>
       <link>https://khanhkid.github.io/tags/editor/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>Linux</title>
+      <title>linux</title>
       <link>https://khanhkid.github.io/tags/linux/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
@@ -39,25 +39,7 @@
     </item>
     
     <item>
-      <title>Php</title>
-      <link>https://khanhkid.github.io/tags/php/</link>
-      <pubDate>Sun, 21 Jul 2019 23:43:50 +0700</pubDate>
-      
-      <guid>https://khanhkid.github.io/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Selflearning</title>
-      <link>https://khanhkid.github.io/tags/selflearning/</link>
-      <pubDate>Thu, 18 Jul 2019 23:17:30 +0700</pubDate>
-      
-      <guid>https://khanhkid.github.io/tags/selflearning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
+      <title>vim</title>
       <link>https://khanhkid.github.io/tags/vim/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
