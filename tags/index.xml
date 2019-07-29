@@ -6,22 +6,22 @@
     <description>Recent content in Tags on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 19 Jul 2019 14:02:36 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jul 2019 23:43:50 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>movies</title>
-      <link>https://khanhkid.github.io/tags/movies/</link>
-      <pubDate>Fri, 19 Jul 2019 14:02:36 +0700</pubDate>
+      <title>Benchmark</title>
+      <link>https://khanhkid.github.io/tags/benchmark/</link>
+      <pubDate>Sun, 21 Jul 2019 23:43:50 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/tags/movies/</guid>
+      <guid>https://khanhkid.github.io/tags/benchmark/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>editor</title>
+      <title>Editor</title>
       <link>https://khanhkid.github.io/tags/editor/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://khanhkid.github.io/tags/linux/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
@@ -39,7 +39,25 @@
     </item>
     
     <item>
-      <title>vim</title>
+      <title>Movies</title>
+      <link>https://khanhkid.github.io/tags/movies/</link>
+      <pubDate>Fri, 19 Jul 2019 14:02:36 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/tags/movies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>https://khanhkid.github.io/tags/php/</link>
+      <pubDate>Sun, 21 Jul 2019 23:43:50 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
       <link>https://khanhkid.github.io/tags/vim/</link>
       <pubDate>Wed, 17 Jul 2019 16:46:58 +0700</pubDate>
       
