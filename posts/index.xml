@@ -12,13 +12,15 @@
     
     
     <item>
-      <title>Ssl Free With Lets Encrypt</title>
+      <title>Hướng dẫn tạo ssl wildcard free với Lets Encrypt</title>
       <link>https://khanhkid.github.io/posts/ssl-free-with-lets-encrypt/</link>
       <pubDate>Wed, 07 Aug 2019 13:41:07 +0700</pubDate>
       
       <guid>https://khanhkid.github.io/posts/ssl-free-with-lets-encrypt/</guid>
-      <description>Hướng dẫn tạo ssl wildcard free với Lets Encrypt SSL có 2 dạng chính mà chúng ta biết đến là
- Single SSL: https chỉ 1 domain giống như là https:\\example.com\ Wildcard SSL: https cho tất cả các subdomain https:\\example.com\ https:\\sub1.example.com\ https:\\sub2.example.com\  Let&amp;rsquo;s Encrypt (LE) ngoài việc cung cấp 1 single SSL thì LE còn cung cấp cho người dùng có thể tạo wildcard SSL. Sau đây mình note lại những bước căn bản để lấy 1 wildcard SSL</description>
+      <description>SSL có 2 dạng chính mà chúng ta biết đến là
+ Single SSL: https chỉ 1 domain giống như là
+https:\\example.com\ Wildcard SSL: https cho tất cả các subdomain
+https:\\example.com\ https:\\sub1.example.com\ https:\\sub2.example.com\  Let&amp;rsquo;s Encrypt (LE) ngoài việc cung cấp 1 single SSL thì LE còn cung cấp cho người dùng có thể tạo wildcard SSL. Sau đây mình note lại những bước căn bản để lấy 1 wildcard SSL</description>
     </item>
     
     <item>

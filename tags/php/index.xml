@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Php on Tôi học làm DevOps</title>
+    <title>Php on Nơi tui viết chuyện đời </title>
     <link>https://khanhkid.github.io/tags/php/</link>
-    <description>Recent content in Php on Tôi học làm DevOps</description>
+    <description>Recent content in Php on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Jul 2019 23:43:50 +0700</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Yeild Read File</title>
-      <link>https://khanhkid.github.io/posts/yeild-read-file/</link>
+      <link>https://khanhkid.github.io/posts/self-learning/yield-vs-return/</link>
       <pubDate>Sun, 21 Jul 2019 23:43:50 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/posts/yeild-read-file/</guid>
+      <guid>https://khanhkid.github.io/posts/self-learning/yield-vs-return/</guid>
       <description>Benchmark readfile with normal way and yeild
 1000000line Normal: 0 B - 0.12738299369812 Yeild: 136.02 MiB - 0.141597032547 100000line Normal: 0 B - 0.013264179229736 Yeild: 11.18 MiB - 0.011452913284302 10000line Normal: 0 B - 0.0013930797576904 Yeild: 1.2 MiB - 0.0010578632354736 1000line Normal: 0 B - 0.00021696090698242 Yeild: 112.84 KiB - 0.00014495849609375 100line Normal: 0 B - 0.00013208389282227 Yeild: 0 B - 5.5074691772461E-5   Source Code
  function file_lines($filename) { $file = fopen($filename, &amp;#39;r&amp;#39;); while (($line = fgets($file)) !</description>
