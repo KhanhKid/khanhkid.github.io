@@ -106,13 +106,17 @@ cd certbot &amp;&amp; ./certbot-auto</pre></div>
 <h2 id="bước-3-tạo-ssl">Bước 3: Tạo SSL</h2>
 
 <p>Để lấy chứng chỉ LE chúng ta dùng câu lệnh bên dưới</p>
-<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./certbot-auto certonly --manual --preferred-challenges=dns -d remojob.net -d *.remojob.net
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./certbot-auto certonly --manual \
+    --preferred-challenges=dns \
+    -d example.com \
+    -d *.example.com \ 
 
 certonly                Obtain or renew a certificate, but do not install it
 -d                      Add domain 
 --preferred-challenges  Dùng link address (https.dns) or DNS TXT records (dns)
 --manual                Enable Tour guide </pre></div>
-<p>Cerbot sẽ yêu cầu bạn làm 1 trong 2 việc chứng thực domain chính là của bạn</p>
+<p>Nếu chứng thực 1 single domain thì bạn có thể bỏ <code>-d *.example.com</code>
+Cerbot sẽ yêu cầu bạn làm 1 trong 2 việc chứng thực domain chính là của bạn</p>
 
 <ul>
 <li><strong>Dùng link address</strong></li>
