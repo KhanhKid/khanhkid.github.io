@@ -85,7 +85,7 @@ https:\\sub2.example.com\</pre></div></li>
 
 <p>Let&rsquo;s Encrypt (LE) ngoài việc cung cấp 1 single SSL thì LE còn cung cấp cho người dùng có thể tạo wildcard SSL. Sau đây mình note lại những bước căn bản để lấy 1 wildcard SSL</p>
 
-<h2 id="yêu-cầu">Yêu cầu</h2>
+<h2 id="bước-1-yêu-cầu">Bước 1: Yêu cầu</h2>
 
 <p>Let&rsquo;s Encrypt cần Python 2.7 or 3 và git để cài đặt</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">apt-get update
@@ -93,7 +93,7 @@ apt-get install python-minimal
 python --version
 apt-get install git-core
 git --version</pre></div>
-<h2 id="cài-đặt-cert-bot">Cài Đặt Cert-Bot</h2>
+<h2 id="bước-2-cài-đặt-cert-bot">Bước 2: Cài Đặt Cert-Bot</h2>
 
 <p>Cert-Bot là 1 công cụ để lấy chứng chỉ LE</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">export LC_ALL=&#34;en_US.UTF-8&#34;
@@ -103,7 +103,7 @@ git clone https://github.com/certbot/certbot.git
 cd certbot &amp;&amp; ./certbot-auto</pre></div>
 <p>Hoặc có thể cài bằng cách</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">sudo apt-get install letsencrypt</pre></div>
-<h2 id="tạo-ssl">Tạo SSL</h2>
+<h2 id="bước-3-tạo-ssl">Bước 3: Tạo SSL</h2>
 
 <p>Để lấy chứng chỉ LE chúng ta dùng câu lệnh bên dưới</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">./certbot-auto certonly --manual --preferred-challenges=dns -d remojob.net -d *.remojob.net
@@ -112,7 +112,7 @@ certonly                Obtain or renew a certificate, but do not install it
 -d                      Add domain 
 --preferred-challenges  Dùng link address (https.dns) or DNS TXT records (dns)
 --manual                Enable Tour guide </pre></div>
-<p>Cerbot sẽ yêu cầu bạn làm 1 trong 2 việc chứng thực domain</p>
+<p>Cerbot sẽ yêu cầu bạn làm 1 trong 2 việc chứng thực domain chính là của bạn</p>
 
 <ul>
 <li><strong>Dùng link address</strong></li>
@@ -160,7 +160,7 @@ SSLCertificateKeyFile /etc/letsencrypt/live/example.com/private.pem
 SSLCertificateChainFile /etc/letsencrypt/live/example.com/chain.pem</pre></div>
 <p>Thế là xong việc tạo 1 wildcard SSL cho domain của bạn</p>
 
-<h2 id="auto-renew-mỗi-3-tháng">Auto Renew mỗi 3 tháng</h2>
+<h2 id="bước-4-auto-renew-mỗi-3-tháng">Bước 4: Auto Renew mỗi 3 tháng</h2>
 
 <p>LE chỉ cung cấp cho bạn 3 tháng vì vậy tạo 1 crontab để mỗi tháng tự động renew lại SSL là mọi chuyện ổn hết</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">30 0 1 */2 * /opt/certbot/certbot-auto renew &amp;&amp; service [nginx|apache2] reload</pre></div>
@@ -170,10 +170,10 @@ SSLCertificateChainFile /etc/letsencrypt/live/example.com/chain.pem</pre></div>
 <ul>
 <li>
 <ul>
-<li><a href="#yêu-cầu">Yêu cầu</a></li>
-<li><a href="#cài-đặt-cert-bot">Cài Đặt Cert-Bot</a></li>
-<li><a href="#tạo-ssl">Tạo SSL</a></li>
-<li><a href="#auto-renew-mỗi-3-tháng">Auto Renew mỗi 3 tháng</a></li>
+<li><a href="#bước-1-yêu-cầu">Bước 1: Yêu cầu</a></li>
+<li><a href="#bước-2-cài-đặt-cert-bot">Bước 2: Cài Đặt Cert-Bot</a></li>
+<li><a href="#bước-3-tạo-ssl">Bước 3: Tạo SSL</a></li>
+<li><a href="#bước-4-auto-renew-mỗi-3-tháng">Bước 4: Auto Renew mỗi 3 tháng</a></li>
 </ul></li>
 </ul>
 </nav>
