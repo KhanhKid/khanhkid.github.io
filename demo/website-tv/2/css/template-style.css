@@ -1901,8 +1901,8 @@ p.form-success {
 
 
 body {
-  font-family: "Work Sans";
-  font-weight: 400;
+  font-family: "Roboto","Work Sans";
+  font-weight: 600;
 }
 p {
   line-height: 1.6;
@@ -2281,10 +2281,10 @@ a.text-tag:link:hover {
   color: #282828;
 } 
 .text-dark, .text-dark *, .primary-color-dark .text-primary, .primary-color-dark .text-primary * {
-  color: #282828 !important;
+  color: #2a4769 !important;
 } 
 .text-dark-hover:hover, .primary-color-dark .text-primary-hover:hover {
-  color: #282828 !important;
+  color: #2a4769 !important;
 } 
 .background-dark, .primary-color-dark .background-primary {
   background-color: #282828 !important; 
@@ -2497,6 +2497,10 @@ aside {
   display:block;
   height:600px;
   width:100%;
+}
+.expression {
+  font-family: 'Anton', sans-serif;
+  text-align: -webkit-center;
 }
 
 @media screen and (max-width:768px) {
