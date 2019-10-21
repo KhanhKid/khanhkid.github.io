@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2019 13:41:07 +0700</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2019 09:46:58 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>mysql</title>
+      <link>https://khanhkid.github.io/tags/mysql/</link>
+      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://khanhkid.github.io/tags/nginx/</link>
+      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>service</title>
+      <link>https://khanhkid.github.io/tags/service/</link>
+      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/tags/service/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>letsencrypt</title>

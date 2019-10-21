@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on Nơi tui viết chuyện đời </title>
+    <link>https://khanhkid.github.io/tags/nginx/</link>
+    <description>Recent content in nginx on Nơi tui viết chuyện đời </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2019 09:46:58 +0700</lastBuildDate>
+    
+	<atom:link href="https://khanhkid.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Nginx, Mysql</title>
+      <link>https://khanhkid.github.io/posts/self-learning/install-nginx-mysql-gcp/</link>
+      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/posts/self-learning/install-nginx-mysql-gcp/</guid>
+      <description>OVERVIEW Quick note about Install Nginx + Mysql
+INSTALL NGINX Step 1: ssh to the server and run
+sudo apt update sudo apt install nginx Step 2: Check nginx installed &amp;amp; running
+sudo nginx -v sudo systemctl status nginx You can see this
+Congratuation!!!</description>
+    </item>
+    
+  </channel>
+</rss>
