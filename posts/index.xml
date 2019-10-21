@@ -21,7 +21,10 @@
 INSTALL NGINX Step 1: ssh to the server and run
 sudo apt update sudo apt install nginx Step 2: Check nginx installed &amp;amp; running
 sudo nginx -v sudo systemctl status nginx You can see this
-Congratuation!!!</description>
+Congratuation!!!
+INSTALL MYSQL Step 1: ssh to the server and run
+sudo apt update sudo apt install nginx Step 2: Check nginx installed &amp;amp; running
+sudo nginx -v sudo systemctl status nginx You can see this</description>
     </item>
     
     <item>
