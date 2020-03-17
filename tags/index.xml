@@ -6,35 +6,44 @@
     <description>Recent content in Tags on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2019 09:46:58 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 10:54:23 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>mysql</title>
-      <link>https://khanhkid.github.io/tags/mysql/</link>
-      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      <title>devops</title>
+      <link>https://khanhkid.github.io/tags/devops/</link>
+      <pubDate>Tue, 17 Mar 2020 10:54:23 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/tags/mysql/</guid>
+      <guid>https://khanhkid.github.io/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>nginx</title>
-      <link>https://khanhkid.github.io/tags/nginx/</link>
-      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      <title>docker</title>
+      <link>https://khanhkid.github.io/tags/docker/</link>
+      <pubDate>Tue, 17 Mar 2020 10:54:23 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/tags/nginx/</guid>
+      <guid>https://khanhkid.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>service</title>
-      <link>https://khanhkid.github.io/tags/service/</link>
-      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      <title>openvpn</title>
+      <link>https://khanhkid.github.io/tags/openvpn/</link>
+      <pubDate>Tue, 17 Mar 2020 10:54:23 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/tags/service/</guid>
+      <guid>https://khanhkid.github.io/tags/openvpn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>https://khanhkid.github.io/tags/vpn/</link>
+      <pubDate>Tue, 17 Mar 2020 10:54:23 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/tags/vpn/</guid>
       <description></description>
     </item>
     

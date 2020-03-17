@@ -6,32 +6,21 @@
     <description>Recent content in Posts on Nơi tui viết chuyện đời </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2019 09:46:58 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 10:54:23 +0700</lastBuildDate>
     
 	<atom:link href="https://khanhkid.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Install Nginx, Mysql</title>
-      <link>https://khanhkid.github.io/posts/self-learning/install-nginx-mysql-gcp/</link>
-      <pubDate>Mon, 21 Oct 2019 09:46:58 +0700</pubDate>
+      <title>[20200317] OPENVPN with Docker</title>
+      <link>https://khanhkid.github.io/posts/self-learning/20200317-vpn-docker/</link>
+      <pubDate>Tue, 17 Mar 2020 10:54:23 +0700</pubDate>
       
-      <guid>https://khanhkid.github.io/posts/self-learning/install-nginx-mysql-gcp/</guid>
-      <description>OVERVIEW Quick note about Install Nginx + Mysql
-INSTALL NGINX Step 1: ssh to the server and run
-sudo apt update sudo apt install nginx Step 2: Check nginx installed &amp;amp; running
-sudo nginx -v sudo systemctl status nginx You can see this
-Congratuation!!!
-Step 3: Check service is available</description>
-    </item>
-    
-    <item>
-      <title>Code ngầu hơn vs Php ^7.1 </title>
-      <link>https://khanhkid.github.io/posts/self-learning/cool-ngau-vs-php-code/</link>
-      <pubDate>Fri, 09 Aug 2019 16:56:29 +0700</pubDate>
-      
-      <guid>https://khanhkid.github.io/posts/self-learning/cool-ngau-vs-php-code/</guid>
-      <description>Qua nhiều sự thay đổi của PHP version thì PHP đã là đang phát triển phù hợp với xu thế mới của các ngôn ngữ lập trình. Dù đã 25 năm tuổi nhưng PHP vẫn còn 1 chỗ đứng trong kha khá ngôn ngữ về lập trình web. Sau quá trình lập việc vơi PHP thì mình cũng có vài tips nho nhỏ để viết PHP code trở nên cool ngầu hơn.</description>
+      <guid>https://khanhkid.github.io/posts/self-learning/20200317-vpn-docker/</guid>
+      <description>Cài Đặt OPENVPN in Linux with Docker Bỗng một ngày đẹp trời có việc bạn phải ra ngoài để làm việc thì làm sao có thể dùng LocalNetwork trong khi trong ta đang đi ngoài Office.
+VPN là một giải phải cho vấn đề hiện tại
+VPN có những thuận lợi và việc work at home như sau
+ Sử dụng được LocalNetwork (các tài nguyên như NAS) trong office trong khi ở ngoài Office Tạo bảo mật trên đường truyền người dùng nhằm giấu danh tính (sử dụng IP của Office nên ko biết IP của client) Tốc độ có thể nhanh hơn khi dùng VPN (Hmmm)  Trong phạm vi bài post này chúng ta sẽ tiến hành cải một OpenVPN server trên Linux bằng docker và cách sử dụng OpenVPN</description>
     </item>
     
     <item>

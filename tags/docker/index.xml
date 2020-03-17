@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Nơi tui viết chuyện đời </title>
+    <link>https://khanhkid.github.io/tags/docker/</link>
+    <description>Recent content in docker on Nơi tui viết chuyện đời </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Mar 2020 10:54:23 +0700</lastBuildDate>
+    
+	<atom:link href="https://khanhkid.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[20200317] OPENVPN with Docker</title>
+      <link>https://khanhkid.github.io/posts/self-learning/20200317-vpn-docker/</link>
+      <pubDate>Tue, 17 Mar 2020 10:54:23 +0700</pubDate>
+      
+      <guid>https://khanhkid.github.io/posts/self-learning/20200317-vpn-docker/</guid>
+      <description>Cài Đặt OPENVPN in Linux with Docker Bỗng một ngày đẹp trời có việc bạn phải ra ngoài để làm việc thì làm sao có thể dùng LocalNetwork trong khi trong ta đang đi ngoài Office.
+VPN là một giải phải cho vấn đề hiện tại
+VPN có những thuận lợi và việc work at home như sau
+ Sử dụng được LocalNetwork (các tài nguyên như NAS) trong office trong khi ở ngoài Office Tạo bảo mật trên đường truyền người dùng nhằm giấu danh tính (sử dụng IP của Office nên ko biết IP của client) Tốc độ có thể nhanh hơn khi dùng VPN (Hmmm)  Trong phạm vi bài post này chúng ta sẽ tiến hành cải một OpenVPN server trên Linux bằng docker và cách sử dụng OpenVPN</description>
+    </item>
+    
+  </channel>
+</rss>

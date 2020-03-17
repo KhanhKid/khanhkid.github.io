@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>[20200317] OPENVPN with Docker - Nơi tui viết chuyện đời </title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="[20200317] OPENVPN with Docker" />
+<meta property="og:description" content="Cài Đặt OPENVPN in Linux with Docker Bỗng một ngày đẹp trời có việc bạn phải ra ngoài để làm việc thì làm sao có thể dùng LocalNetwork trong khi trong ta đang đi ngoài Office.
+VPN là một giải phải cho vấn đề hiện tại
+VPN có những thuận lợi và việc work at home như sau
+ Sử dụng được LocalNetwork (các tài nguyên như NAS) trong office trong khi ở ngoài Office Tạo bảo mật trên đường truyền người dùng nhằm giấu danh tính (sử dụng IP của Office nên ko biết IP của client) Tốc độ có thể nhanh hơn khi dùng VPN (Hmmm)  Trong phạm vi bài post này chúng ta sẽ tiến hành cải một OpenVPN server trên Linux bằng docker và cách sử dụng OpenVPN" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://khanhkid.github.io/posts/self-learning/20200317-vpn-docker/" />
+<meta property="article:published_time" content="2020-03-17T10:54:23&#43;07:00"/>
+<meta property="article:modified_time" content="2020-03-17T10:54:23&#43;07:00"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[20200317] OPENVPN with Docker"/>
+<meta name="twitter:description" content="Cài Đặt OPENVPN in Linux with Docker Bỗng một ngày đẹp trời có việc bạn phải ra ngoài để làm việc thì làm sao có thể dùng LocalNetwork trong khi trong ta đang đi ngoài Office.
+VPN là một giải phải cho vấn đề hiện tại
+VPN có những thuận lợi và việc work at home như sau
+ Sử dụng được LocalNetwork (các tài nguyên như NAS) trong office trong khi ở ngoài Office Tạo bảo mật trên đường truyền người dùng nhằm giấu danh tính (sử dụng IP của Office nên ko biết IP của client) Tốc độ có thể nhanh hơn khi dùng VPN (Hmmm)  Trong phạm vi bài post này chúng ta sẽ tiến hành cải một OpenVPN server trên Linux bằng docker và cách sử dụng OpenVPN"/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:500,100,300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" type="image/png" href="/img/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" /><script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script><script src="/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title">Nơi tui viết chuyện đời </h1>
+	<div class="site-description"><h2>Sooner better than later</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/khanhkid" title="Github"><i data-feather="github"></i></a><a href="https://www.linkedin.com/in/khanhkid/" title="Linkedin"><i data-feather="linkedin"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Trang chủ</a>
+			</li>
+			
+			<li>
+				<a href="/about">Về tui</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Chủ đề</a>
+			</li>
+			
+			<li>
+				<a href="/tags/movies">Phim</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">[20200317] OPENVPN with Docker</h1>
+			<div class="meta">Posted at &mdash; Mar 17, 2020</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<h1 id="cài-đặt-openvpn-in-linux-with-docker">Cài Đặt OPENVPN in Linux with Docker</h1>
+
+<p>Bỗng một ngày đẹp trời có việc bạn phải ra ngoài để làm việc thì làm sao có thể dùng LocalNetwork trong khi trong ta đang đi ngoài Office.</p>
+
+<p>VPN là một giải phải cho vấn đề hiện tại</p>
+
+<p><img class="special-img-class"¬ src="/posts/images/20200317_openvpn/vpn_overview.png"></p>
+
+<p>VPN có những thuận lợi và việc work at home như sau</p>
+
+<ul>
+<li>Sử dụng được LocalNetwork (các tài nguyên như NAS) trong office trong khi ở ngoài Office</li>
+<li>Tạo bảo mật trên đường truyền người dùng nhằm giấu danh tính (sử dụng IP của Office nên ko biết IP của client)</li>
+<li>Tốc độ có thể nhanh hơn khi dùng VPN (Hmmm)</li>
+</ul>
+
+<p>Trong phạm vi bài post này chúng ta sẽ tiến hành cải một OpenVPN server trên Linux bằng docker và cách sử dụng OpenVPN</p>
+
+<h2 id="requirement">Requirement</h2>
+
+<ul>
+<li>Git</li>
+<li>Docker</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<h3 id="cài-đặt-openvpn-server">Cài Đặt OPENVPN SERVER</h3>
+
+<p><strong>Bước 01:</strong> Bắt đầu với việc clone rep OPENVPN và build image trong docker</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">git clone https://github.com/kylemanna/docker-openvpn.git docker-openvpn</pre></div>
+<p>Truy cập vào thư mục <code>docker-openvn</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd docker-openvpn/</pre></div>
+<p>Thực thi cài đặt Docker Image</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">docker build -t myownvpn .</pre></div>
+<p>Chúng ta tiếp tục cần một thư mục để chứa dữ liệu của openvpn</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">cd ..
+mkdir vpn-data</pre></div>
+<p><strong>Bước 02:</strong> Chúng ta sẽ bắt đầu chạy OpenVPN đề tạo các file cấu hình ở đây chúng ta sử dụng port 3000 cho VPN:</p>
+
+<p><strong>[IP_ADDRESS]</strong>: Thay đổi bằng IP public của server bạn</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$ docker run -v $PWD/vpn-data:/etc/openvpn --rm myownvpn \
+ ovpn_genconfig -u udp://[IP_ADDRESS]:3000</pre></div>
+<p>Output:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">Processing PUSH Config: &#39;block-outside-dns&#39;
+Processing Route Config: &#39;192.168.254.0/24&#39;
+Processing PUSH Config: &#39;dhcp-option DNS 8.8.8.8&#39;
+Processing PUSH Config: &#39;dhcp-option DNS 8.8.4.4&#39;
+Successfully generated config
+Cleaning up before Exit ...</pre></div>
+<p><strong>Bước 03:</strong> Tiếp tục chúng ta sẽ tạo PKI, CA, Private key những file key để mã hoá đường truyền:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$ docker run -v $PWD/vpn-data:/etc/openvpn --rm -it myownvpn ovpn_initpki</pre></div>
+<p><strong>Verifying - Enter PEM pass phrase:</strong> Password cho file key &mdash;&gt; Pass này sẽ được hỏi khi tạo client</p>
+
+<p>Output:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">init-pki complete; you may now create a CA or requests.
+Your newly created PKI dir is: /etc/openvpn/pki
+Generating a 2048 bit RSA private key
+............................................................................+++
+....+++
+writing new private key to &#39;/etc/openvpn/pki/private/ca.key.XXXXCFGIEm&#39;
+Enter PEM pass phrase:
+Verifying - Enter PEM pass phrase:
+...
+Common Name (eg: your user, host, or server name) [Easy-RSA CA]:g
+CA creation complete and you may now import and sign cert requests.
+Your new CA certificate file for publishing is at:
+/etc/openvpn/pki/ca.crt
+Generating DH parameters, 2048 bit long safe prime, generator 2
+This is going to take a long time
+... # Wait a while
+Enter pass phrase for /etc/openvpn/pki/private/ca.key:
+Check that the request matches the signature
+...
+Enter pass phrase for /etc/openvpn/pki/private/ca.key:
+An updated CRL has been created.
+CRL file: /etc/openvpn/pki/crl.pem</pre></div>
+<p><strong>Bước 04:</strong> Cuối cùng, Chúng ta sẽ chạy VPN server dựa trên những config chúng ta đã khởi tạo:</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$ docker run -v $PWD/vpn-data:/etc/openvpn -d -p 3000:1194/udp --cap-add=NET_ADMIN myownvpn</pre></div>
+<p>Tới thời điểm này thì chúng ta đã hoàn thành việc tạo và chạy OpenVPN server</p>
+
+<h3 id="cài-đặt-openvpn-client">Cài Đặt OPENVPN ClIENT</h3>
+
+<p>Sau khi cài đặt server và các config thì ta tiếp tục tài khoản người dùng</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$ docker run -v $PWD/vpn-data:/etc/openvpn --rm -it myownvpn easyrsa build-client-full user1 nopass
+Generating a 2048 bit RSA private key
+........................................................+++
+..........................................................+++
+writing new private key to &#39;/etc/openvpn/pki/private/user1.key.XXXXeoGIJE&#39;
+-----
+Using configuration from /usr/share/easy-rsa/openssl-1.0.cnf
+Enter pass phrase for /etc/openvpn/pki/private/ca.key:
+...</pre></div>
+<p>Ở đây chúng ta tạo user với nopass để cho quá trình đăng nhập chỉ cần file key là được nếu các bạn muốn có pass thì hãy bỏ <code>nopass</code></p>
+
+<p>Tạo file key ovpn để gửi cho người dùng config VPN</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$docker run -v $PWD/vpn-data:/etc/openvpn --rm myownvpn ovpn_getclient user1 &gt; user1.ovpn</pre></div>
+<p>Sau đó chúng ta có thể gửi file ovpn cho người dùng và đăng nhập vào VPN sử dụng Tunnelblick hay những phần mềm khác</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;img class=&#34;special-img-class&#34;¬ src=&#34;/posts/images/20200317_openvpn/tunnelblick.png&#34;&gt;</pre></div>
+<h3 id="vài-tính-năng-khác-openvpn">Vài Tính năng khác OPENVPN</h3>
+
+<p>Nhớ <code>cd</code> vào thư mục chứa folder vpn-data</p>
+
+<p>Lấy danh sách account trong server</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$docker run -v $PWD/vpn-data:/etc/openvpn --rm myownvpn ovpn_listclients</pre></div>
+<p>Xuất tất cả các file key của người dùng vào <code>/tmp/openvpn_clients</code></p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$docker run -v $PWD/vpn-data:/etc/openvpn --volume /tmp/openvpn_clients:/etc/openvpn/clients --rm myownvpn ovpn_getclient_all</pre></div>
+<p>Thu hồi quyền truy cập một tài khoản VPN</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$docker run -v $PWD/vpn-data:/etc/openvpn --rm myownvpn ovpn_revokeclient clientname</pre></div>
+<p>Xoá một tài khoản VPN (xoá crt, key and req files)</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">$docker run -v $PWD/vpn-data:/etc/openvpn --rm myownvpn ovpn_revokeclient client1 remove</pre></div>
+<h2 id="reference">Reference</h2>
+
+<p>[<a href="https://medium.com/@gurayy/set-up-a-vpn-server-with-docker-in-5-minutes-a66184882c45">https://medium.com/@gurayy/set-up-a-vpn-server-with-docker-in-5-minutes-a66184882c45</a>]
+[<a href="https://github.com/kylemanna/docker-openvpn.git">https://github.com/kylemanna/docker-openvpn.git</a>]</p>
+
+			
+			<aside>
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#cài-đặt-openvpn-in-linux-with-docker">Cài Đặt OPENVPN in Linux with Docker</a>
+<ul>
+<li><a href="#requirement">Requirement</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#cài-đặt-openvpn-server">Cài Đặt OPENVPN SERVER</a></li>
+<li><a href="#cài-đặt-openvpn-client">Cài Đặt OPENVPN ClIENT</a></li>
+<li><a href="#vài-tính-năng-khác-openvpn">Vài Tính năng khác OPENVPN</a></li>
+</ul></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+			</aside>
+		</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'khanhkid';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div><a href="https://github.com/khanhkid/hugo_khanhkid.github.io/tree/master/themes/ezhil-customize">Ezhil theme customized</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-59156529-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>
